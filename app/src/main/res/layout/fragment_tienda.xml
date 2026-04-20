@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Header -->
+            <LinearLayout
+                android:id="@+id/linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tienda"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/btnCarrito"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    android:src="@android:drawable/ic_menu_view"
+                    app:tint="@color/ColorPrincipal" />
+
+            </LinearLayout>
+
+            <!-- Boton gimnasios -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Consultar tiendas cerca a ti"
+                    android:backgroundTint="@color/ColorPrincipal"
+                    android:textColor="@color/background"/>
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="@color/FondoGris"
+                    android:src="@android:drawable/ic_menu_mylocation"
+                    app:tint="@color/ColorPrincipal" />
+            </LinearLayout>
+
+            <!-- Buscador -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/FondoGris"
+                android:hint="Buscar productos..."
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/GrisTexto"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Categorias -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Todos"
+                    android:backgroundTint="@color/ColorPrincipal"
+                    android:textColor="@color/background"
+                    android:textSize="10sp"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Suplementos"
+                    android:backgroundTint="@color/FondoGris"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Equipo"
+                    android:backgroundTint="@color/FondoGris"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ropa"
+                    android:backgroundTint="@color/FondoGris"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp"/>
+
+            </LinearLayout>
+
+            <!-- Recycler Productos -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_tienda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Tienda">Tienda</string>
+    <string name="Entrenamiento">Entrenamiento</string>
+    <string name="Foro">Foro</string>
+    <string name="Perfil">Perfil</string>
+    <string name="Home">Home</string>
+    <string name="agregar_publicacion">Agregar Publicacion</string>
+    <string name="foro">Foro</string>
+    <string name="t_cnica">Técnica</string>
+    <string name="transformaciones">Transformaciones</string>
+    <string name="tendencias">Tendencias</string>
+    <string name="usuario">Usuario</string>
+    <string name="contenido_del_post">Contenido del post</string>
+    <string name="brayan_juanito">brayan_juanito</string>
+    <string name="nueva_publicaci_n">Nueva publicación</string>
+    <string name="foto">Foto</string>
+    <string name="jd">JD</string>
+    <string name="a_adir_un_t_tulo_opcional">Añadir un título (Opcional)</string>
+    <string name="qu_est_s_pensando_comparte_tus_experiencias">¿Qué estás pensando? Comparte tus experiencias...</string>
+</resources>

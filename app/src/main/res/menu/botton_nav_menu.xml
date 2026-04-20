@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="@string/Home"
+        android:icon="@android:drawable/ic_menu_view"
+        />
+
+    <item
+        android:id="@+id/nav_bottom_entrenamiento"
+        android:title="@string/Entrenamiento"
+        android:icon="@android:drawable/ic_menu_agenda" />
+
+    <item
+        android:id="@+id/nav_bottom_tienda"
+        android:title="@string/Tienda"
+        android:icon="@android:drawable/ic_menu_myplaces" />
+
+    <item
+        android:id="@+id/nav_bottom_foro"
+        android:title="@string/Foro"
+        android:icon="@android:drawable/ic_input_add" />
+    <item
+        android:id="@+id/nav_bottom_perfil"
+        android:title="@string/Perfil"
+        android:icon="@android:drawable/ic_menu_preferences" />
+
+
+</menu>

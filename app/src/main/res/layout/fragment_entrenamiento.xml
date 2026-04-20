@@ -1,14 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.entrenamiento.EntrenamientoFragment">
+    android:background="@color/background">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</FrameLayout>
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Entrenamiento"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnFiltro"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+        <!-- Chips de categorías -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/chipTodos"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Todos"
+                android:textSize="13sp"
+                android:textColor="@color/background"
+                android:backgroundTint="@color/ColorPrincipal"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/chipEmpuje"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Empuje"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/FondoGris"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/chipJalon"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Jalón"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/FondoGris"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/chipPierna"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Pierna"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/FondoGris"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/chipAbdomen"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Abdomen"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/FondoGris" />
+
+        </LinearLayout>
+
+        <!-- RecyclerView ejercicios -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerEntrenamientos"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
+
+    <!-- FAB Agregar -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:text="Agregar Entrenamiento"
+        android:textColor="@color/background"
+        app:icon="@android:drawable/ic_input_add"
+        app:iconTint="@color/background"
+        app:backgroundTint="@color/ColorPrincipal" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

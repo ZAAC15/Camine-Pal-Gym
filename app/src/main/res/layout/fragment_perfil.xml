@@ -396,7 +396,35 @@
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="8dp" />
+        <LinearLayout
+            android:id="@+id/id_administrativo"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp"
+            android:background="?attr/selectableItemBackground">
 
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_agenda"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Panel Administrativo"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_media_next" />
+
+        </LinearLayout>
         <!-- Item: Notificaciones -->
         <LinearLayout
             android:id="@+id/itemNotificaciones"

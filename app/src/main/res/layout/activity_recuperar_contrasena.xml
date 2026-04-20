@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center_horizontal">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/logocontainer"
+            android:scaleType="fitCenter" />
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Recuperación\nde contraseña"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.2" />
+
+        <!-- Subtítulo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/ingresa_tu_correo_electr_nico"
+            android:textColor="@color/GrisTexto"
+            android:textSize="14sp"
+            android:gravity="center" />
+
+        <!-- Campo Correo -->
+
+        <!-- Botón Enviar -->
+        <EditText
+            android:id="@+id/etCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_input"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_button_yellow"
+            android:text="Enviar"
+            android:textColor="@color/background"
+            android:textSize="16sp"
+            android:backgroundTint="@color/ColorPrincipal"
+            app:backgroundTint="@null"
+            android:textStyle="bold"
+            android:letterSpacing="0.05" />
+
+    </LinearLayout>
+
+</ScrollView>

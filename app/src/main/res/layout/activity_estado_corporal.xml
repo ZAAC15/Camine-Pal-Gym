@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:src="@android:drawable/ic_media_previous"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estado Corporal"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Card Overall Score -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/FondoGris"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@android:drawable/ic_menu_compass"
+                android:layout_marginEnd="12dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Overall Fitness Score"
+                    android:textColor="@color/GrisTexto"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tvScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="78"
+                        android:textColor="@color/white"
+                        android:textSize="36sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/100"
+                        android:textColor="@color/GrisTexto"
+                        android:textSize="14sp"
+                        android:layout_marginStart="4dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+3 pts this week"
+                    android:textColor="@color/ColorVerde"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!-- Círculo porcentaje -->
+            <TextView
+                android:id="@+id/tvScoreCirculo"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:text="78%"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/bg_circulo_score" />
+
+        </LinearLayout>
+
+        <!-- Masa corporal + Definición -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <!-- Masa corporal -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@color/FondoGris"
+                android:padding="14dp"
+                android:layout_marginEnd="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Masa corporal"
+                    android:textColor="@color/GrisTexto"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tvMasaCorporal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70 kg"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Barras -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_weight="1"
+                        android:background="@color/ColorPrincipal"
+                        android:layout_marginEnd="3dp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_weight="1"
+                        android:background="@color/ColorPrincipal"
+                        android:layout_marginEnd="3dp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_weight="1"
+                        android:background="@color/ColorPrincipal"
+                        android:layout_marginEnd="3dp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:layout_weight="1"
+                        android:background="@color/FondoGris" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="A1"
+                        android:textColor="@color/GrisTexto"
+                        android:textSize="10sp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="A2"
+                        android:textColor="@color/GrisTexto"
+                        android:textSize="10sp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="A/1"
+                        android:textColor="@color/GrisTexto"
+                        android:textSize="10sp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="A/4"
+                        android:textColor="@color/GrisTexto"
+                        android:textSize="10sp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Definición -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@color/FondoGris"
+                android:padding="14dp"
+                android:layout_marginStart="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Definición"
+                    android:textColor="@color/GrisTexto"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="6dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Círculo 72% -->
+                    <TextView
+                        android:id="@+id/tvDefinicionCirculo"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:text="72%"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@drawable/bg_circulo_score"
+                        android:layout_marginEnd="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Good"
+                            android:textColor="@color/ColorVerde"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+5% this month"
+                            android:textColor="@color/GrisTexto"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Simetría + Volumen -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <!-- Simetría -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@color/FondoGris"
+                android:padding="14dp"
+                android:layout_marginEnd="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Simetría"
+                    android:textColor="@color/GrisTexto"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tvSimetria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="85%"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
+
+                <ProgressBar
+                    android:id="@+id/progressSimetria"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:progress="85"
+                    android:progressTint="@color/ColorPrincipal"
+                    android:progressBackgroundTint="@color/background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Left/Right balance"
+                    android:textColor="@color/GrisTexto"
+                    android:textSize="11sp"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <!-- Volumen -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@color/FondoGris"
+                android:padding="14dp"
+                android:layout_marginStart="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Volumen"
+                    android:textColor="@color/GrisTexto"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tvVolumen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12.4 kg"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
+
+                <!-- Mini gráfica simplificada -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:gravity="bottom">
+
+                    <View android:layout_width="0dp" android:layout_height="20dp"
+                        android:layout_weight="1" android:background="@color/ColorPrincipal"
+                        android:layout_marginHorizontal="2dp" />
+                    <View android:layout_width="0dp" android:layout_height="30dp"
+                        android:layout_weight="1" android:background="@color/ColorPrincipal"
+                        android:layout_marginHorizontal="2dp" />
+                    <View android:layout_width="0dp" android:layout_height="15dp"
+                        android:layout_weight="1" android:background="@color/ColorPrincipal"
+                        android:layout_marginHorizontal="2dp" />
+                    <View android:layout_width="0dp" android:layout_height="35dp"
+                        android:layout_weight="1" android:background="@color/ColorPrincipal"
+                        android:layout_marginHorizontal="2dp" />
+                    <View android:layout_width="0dp" android:layout_height="25dp"
+                        android:layout_weight="1" android:background="@color/ColorPrincipal"
+                        android:layout_marginHorizontal="2dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+
+                    <TextView android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content" android:text="Tue"
+                        android:textColor="@color/GrisTexto" android:textSize="10sp"
+                        android:gravity="center" />
+                    <TextView android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content" android:text="Wed"
+                        android:textColor="@color/GrisTexto" android:textSize="10sp"
+                        android:gravity="center" />
+                    <TextView android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content" android:text="Thu"
+                        android:textColor="@color/GrisTexto" android:textSize="10sp"
+                        android:gravity="center" />
+                    <TextView android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content" android:text="Fri"
+                        android:textColor="@color/GrisTexto" android:textSize="10sp"
+                        android:gravity="center" />
+                    <TextView android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content" android:text="Sat"
+                        android:textColor="@color/GrisTexto" android:textSize="10sp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Consistencia -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/FondoGris"
+            android:padding="14dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Consistencia"
+                    android:textColor="@color/GrisTexto"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@android:drawable/btn_star_big_on" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvConsistencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23 day streak"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Grid de cuadros de racha -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View android:layout_width="0dp" android:layout_height="14dp"
+                    android:layout_weight="1" android:background="@color/ColorPrincipal"
+                    android:layout_marginHorizontal="2dp" />
+                <View android:layout_width="0dp" android:layout_height="14dp"
+                    android:layout_weight="1" android:background="@color/ColorPrincipal"
+                    android:layout_marginHorizontal="2dp" />
+                <View android:layout_width="0dp" android:layout_height="14dp"
+                    android:layout_weight="1" android:background="@color/ColorPrincipal"
+                    android:layout_marginHorizontal="2dp" />
+                <View android:layout_width="0dp" android:layout_height="14dp"
+                    android:layout_weight="1" android:background="@color/ColorPrincipal"
+                    android:layout_marginHorizontal="2dp" />
+                <View android:layout_width="0dp" android:layout_height="14dp"
+                    android:layout_weight="1" android:background="@color/ColorPrincipal"
+                    android:layout_marginHorizontal="2dp" />
+                <View android:layout_width="0dp" android:layout_height="14dp"
+                    android:layout_weight="1" android:background="@color/ColorPrincipal"
+                    android:layout_marginHorizontal="2dp" />
+                <View android:layout_width="0dp" android:layout_height="14dp"
+                    android:layout_weight="1" android:background="@color/ColorPrincipal"
+                    android:layout_marginHorizontal="2dp" />
+                <View android:layout_width="0dp" android:layout_height="14dp"
+                    android:layout_weight="1" android:background="@color/ColorPrincipal"
+                    android:layout_marginHorizontal="2dp" />
+                <View android:layout_width="0dp" android:layout_height="14dp"
+                    android:layout_weight="1" android:background="@color/ColorPrincipal"
+                    android:layout_marginHorizontal="2dp" />
+                <View android:layout_width="0dp" android:layout_height="14dp"
+                    android:layout_weight="1" android:background="@color/ColorPrincipal"
+                    android:layout_marginHorizontal="2dp" />
+                <View android:layout_width="0dp" android:layout_height="14dp"
+                    android:layout_weight="1" android:background="@color/ColorPrincipal"
+                    android:layout_marginHorizontal="2dp" />
+                <View android:layout_width="0dp" android:layout_height="14dp"
+                    android:layout_weight="1" android:background="@color/FondoGris"
+                    android:layout_marginHorizontal="2dp" />
+                <View android:layout_width="0dp" android:layout_height="14dp"
+                    android:layout_weight="1" android:background="@color/FondoGris"
+                    android:layout_marginHorizontal="2dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

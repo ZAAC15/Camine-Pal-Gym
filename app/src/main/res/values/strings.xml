@@ -12,7 +12,6 @@
     <string name="t_cnica">Técnica</string>
     <string name="transformaciones">Transformaciones</string>
     <string name="tendencias">Tendencias</string>
-    <string name="usuario">Usuario</string>
     <string name="contenido_del_post">Contenido del post</string>
     <string name="brayan_juanito">brayan_juanito</string>
     <string name="nueva_publicaci_n">Nueva publicación</string>
@@ -20,4 +19,27 @@
     <string name="jd">JD</string>
     <string name="a_adir_un_t_tulo_opcional">Añadir un título (Opcional)</string>
     <string name="qu_est_s_pensando_comparte_tus_experiencias">¿Qué estás pensando? Comparte tus experiencias...</string>
+    <string name="ingresa_tu_correo_electr_nico">Ingresa tu correo electrónico</string>
+    <string name="ya_tienes_una_cuenta">¿Ya tienes una cuenta?</string>
+    <string name="verificar_contrase_a">Verificar Contraseña</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="camine_pal_gym">Camine Pal Gym</string>
+    <string name="logo">Logo</string>
+    <string name="Logo">Logo</string>
+    <string name="correo_o_usuario">Correo o usuario</string>
+    <string name="caminepalgymM">CAMINE PAL GYM</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="olvidaste_tu_contrasena">¿Olvidaste tu contraseña?</string>
+    <string name="o_continua_con">o continua con</string>
+    <string name="sesionbiometrico">Inicio de sesión biométrico</string>
+    <string name="no_tienes_una_cuenta">¿No tienes una cuenta?</string>
+    <string name="registrate">Registrate</string>
+    <string name="registrarse">REGISTRARSE</string>
+    <string name="usuario">Usuario</string>
+    <string name="correo">Correo</string>
+    <string name="celular">Celular</string>
+    <string name="verificar_contrasena">Verificar Contraseña</string>
+    <string name="tyc">Acepto Terminos y Condiciones</string>
+    <string name="btnregistrarse">Registrarse</string>
 </resources>

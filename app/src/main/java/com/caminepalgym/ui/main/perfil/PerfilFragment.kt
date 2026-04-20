@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.caminepalgym.R
+import com.caminepalgym.ui.main.admin.PanelAdminActivity
 import kotlin.jvm.java
 
 class PerfilFragment : Fragment() {
@@ -39,6 +40,9 @@ class PerfilFragment : Fragment() {
 
         view.findViewById<View>(R.id.itemAyuda).setOnClickListener {
             startActivity(Intent(requireContext(), AyudaSoporteActivity::class.java))
+        }
+        view.findViewById<View>(R.id.id_administrativo).setOnClickListener {
+            startActivity(Intent(requireContext(), PanelAdminActivity::class.java))
         }
 
         view.findViewById<View>(R.id.itemCerrarSesion).setOnClickListener {

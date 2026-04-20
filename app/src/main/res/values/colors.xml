@@ -8,4 +8,7 @@
     <color name="ColorRojo">#F44336</color>
     <color name="FondoGris">#121212</color>
     <color name="GrisTexto">#9E9E9E</color>
+    <color name="Azul">#2196F3</color>
+    <color name="Morado">#673AB7</color>
+    <color name="Naranja">#FF5722</color>
 </resources>

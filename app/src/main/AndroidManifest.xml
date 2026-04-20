@@ -12,6 +12,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CaminePalGym">
         <activity
+            android:name=".ui.auth.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.RecuperarContrasenaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.admin.PanelAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.entrenamiento.EstadoCorporalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.perfil.TemaActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.main.perfil.SuscripcionActivity"
             android:exported="false" />
         <activity
@@ -36,7 +57,7 @@
             android:name=".ui.main.foro.CrearPostActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.inicio.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

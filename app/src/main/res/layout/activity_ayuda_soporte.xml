@@ -32,7 +32,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Ayuda y Soporte"
+                android:text="@string/ayuda_y_soporte"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -48,7 +48,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Preguntas frecuentes"
+            android:text="@string/preguntas_frecuentes"
             android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -74,7 +74,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="¿Cómo puedo seguir mi progreso?"
+                    android:text="@string/c_mo_puedo_seguir_mi_progreso"
                     android:textColor="@color/white"
                     android:textSize="14sp" />
 
@@ -88,7 +88,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Accede al Panel de Control para ver tu estado físico completo, incluyendo masa muscular, definición, simetría y actividad semanal. También puedes añadir mediciones desde la pantalla de inicio con el botón +."
+                android:text="@string/accede_al_panel_de_control_para_ver_tu_estado_f_sico_completo_incluyendo_masa_muscular_definici_n_simetr_a_y_actividad_semanal_tambi_n_puedes_a_adir_mediciones_desde_la_pantalla_de_inicio_con_el_bot_n"
                 android:textColor="@color/GrisTexto"
                 android:textSize="13sp"
                 android:layout_marginTop="8dp" />
@@ -110,7 +110,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="¿Puedo sincronizar con otras aplicaciones?"
+                android:text="@string/puedo_sincronizar_con_otras_aplicaciones"
                 android:textColor="@color/white"
                 android:textSize="14sp" />
 
@@ -136,7 +136,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="¿Cómo cancelo mi suscripción?"
+                android:text="@string/c_mo_cancelo_mi_suscripci_n"
                 android:textColor="@color/white"
                 android:textSize="14sp" />
 
@@ -162,7 +162,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="¿Cómo restablezco mi contraseña?"
+                android:text="@string/c_mo_restablezco_mi_contrase_a"
                 android:textColor="@color/white"
                 android:textSize="14sp" />
 
@@ -188,7 +188,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="¿Están seguros mis datos?"
+                android:text="@string/est_n_seguros_mis_datos"
                 android:textColor="@color/white"
                 android:textSize="14sp" />
 
@@ -203,7 +203,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ponerse en contacto"
+            android:text="@string/ponerse_en_contacto"
             android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -214,7 +214,7 @@
             android:id="@+id/btnContactarSoporte"
             android:layout_width="match_parent"
             android:layout_height="52dp"
-            android:text="Contactar con soporte técnico"
+            android:text="@string/contactar_con_soporte_t_cnico"
             android:backgroundTint="@color/background"
             android:textColor="@color/ColorPrincipal"
             android:textStyle="bold"
@@ -226,7 +226,7 @@
             android:id="@+id/btnForo"
             android:layout_width="match_parent"
             android:layout_height="52dp"
-            android:text="Únase al foro de la comunidad"
+            android:text="@string/nase_al_foro_de_la_comunidad"
             android:backgroundTint="@color/background"
             android:textColor="@color/white"
             android:textStyle="bold"
@@ -243,7 +243,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CAMINE PAL GYM"
+                android:text="@string/camine_pal_gym_2"
                 android:textColor="@color/GrisTexto"
                 android:textSize="13sp"
                 android:textStyle="bold" />
@@ -251,14 +251,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Versión 1.0"
+                android:text="@string/versi_n_1_0"
                 android:textColor="@color/GrisTexto"
                 android:textSize="11sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="© 2025 CPG Inc. All rights reserved."
+                android:text="@string/_2025_cpg_inc_all_rights_reserved"
                 android:textColor="@color/GrisTexto"
                 android:textSize="11sp"
                 android:layout_marginTop="2dp" />

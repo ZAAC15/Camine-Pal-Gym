@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/FondoGris">
+
+    <!-- ========== HEADER: FLECHA ATRÁS + TÍTULO + LUPA ========== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="12dp">
+
+        <!-- ICONO: ic_arrow_back -->
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_access_time"
+            app:tint="@color/white"
+            android:contentDescription="@string/atr_s"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Plan de hoy"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-bold" />
+
+        <!-- ICONO: ic_search (lupa) -->
+        <ImageView
+            android:id="@+id/ivBuscar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_body_model"
+            app:tint="@color/white"
+            android:contentDescription="Buscar" />
+    </LinearLayout>
+
+    <!-- ========== SCROLL PRINCIPAL ========== -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="24dp">
+
+            <!-- ===== CARD RESUMEN DEL DÍA ===== -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardResumenDia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="#1E1E1E"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Fila: Nombre del día + icono trofeo -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvNombreDia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dia de empuje"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                android:fontFamily="sans-serif-bold" />
+
+                            <TextView
+                                android:id="@+id/tvFocoDia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Enfocado en Pecho y Tricep"
+                                android:textColor="#888888"
+                                android:textSize="13sp"
+                                android:layout_marginTop="2dp" />
+                        </LinearLayout>
+
+                        <!--
+                            ICONO: Trofeo/copa — ic_emoji_events o ic_trophy
+                            Color amarillo #F5C518
+                        -->
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_fire"
+                            app:tint="#F5C518"
+                            android:contentDescription="Trofeo" />
+                    </LinearLayout>
+
+                    <!-- Divisor -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#2A2A2A"
+                        android:layout_marginVertical="14dp" />
+
+                    <!-- Progreso label + contador -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Progreso"
+                            android:textColor="#888888"
+                            android:textSize="13sp" />
+
+                        <!-- "3/6 ejercicios" — el número amarillo -->
+                        <TextView
+                            android:id="@+id/tvProgresoEjercicios"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3/6 ejercicios"
+                            android:textColor="#F5C518"
+                            android:textSize="13sp"
+                            android:fontFamily="sans-serif-bold" />
+                    </LinearLayout>
+
+                    <!-- Barra de progreso amarilla -->
+                    <ProgressBar
+                        android:id="@+id/progressEjercicios"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:progress="50"
+                        android:max="100"
+                        android:progressDrawable="@drawable/bg_progress_bar"
+                        android:layout_marginBottom="14dp" />
+
+                    <!-- Duración + calorías -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <!-- ICONO: ic_access_time (reloj pequeño) -->
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_access_time"
+                            app:tint="#888888"
+                            android:contentDescription="Duración"
+                            android:layout_marginEnd="4dp" />
+
+                        <TextView
+                            android:id="@+id/tvDuracion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="65 min"
+                            android:textColor="#888888"
+                            android:textSize="13sp"
+                            android:layout_marginEnd="16dp" />
+
+                        <!-- ICONO: ic_local_fire_department (llama/fuego naranja) -->
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_fire"
+                            app:tint="@color/Naranja"
+                            android:contentDescription="@string/calor_as"
+                            android:layout_marginEnd="4dp" />
+
+                        <TextView
+                            android:id="@+id/tvCalorias"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_450_kcal"
+                            android:textColor="@color/GrisTexto"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- - Ejercicio 1: Press plano (COMPLETADO) - -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardEjercicio1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="#1E1E1E"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <!-- Nombre + badge en la misma fila -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="6dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Press plano"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:layout_marginEnd="8dp" />
+
+                            <!-- Badge "Chest" amarillo -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chest"
+                                android:textColor="@color/white"
+                                android:textSize="11sp"
+                                android:fontFamily="sans-serif-bold"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="3dp"
+                                android:background="@drawable/bg_badge_yellow" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4 sets × 12 reps × 80kg"
+                            android:textColor="#888888"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <!-- Check completado: círculo amarillo con tick blanco -->
+                    <!-- ICONO: ic_check_circle (relleno amarillo) -->
+                    <ImageView
+                        android:id="@+id/ivCheck1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_fire"
+                        app:tint="@color/ColorPrincipal"
+                        android:contentDescription="@string/completado" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Ejercicio 2: Press inclinado con mancuernas (COMPLETADO) - -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardEjercicio2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="#1E1E1E"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Press inclinado con\nmancuernas"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:layout_marginBottom="6dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chest"
+                                android:textColor="#121212"
+                                android:textSize="11sp"
+                                android:fontFamily="sans-serif-bold"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="3dp"
+                                android:background="@drawable/bg_badge_yellow"
+                                android:layout_marginEnd="10dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3 sets × 10 reps × 32kg"
+                                android:textColor="#888888"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivCheck2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_fire"
+                        app:tint="@color/ColorPrincipal"
+                        android:contentDescription="Completado" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--  Ejercicio 3: Cable Flyes  -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardEjercicio3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="#1E1E1E"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="6dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cable Flyes"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:layout_marginEnd="8dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chest"
+                                android:textColor="#121212"
+                                android:textSize="11sp"
+                                android:fontFamily="sans-serif-bold"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="3dp"
+                                android:background="@drawable/bg_badge_yellow" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3 sets × 15 reps × 15kg"
+                            android:textColor="#888888"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivCheck3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_fire"
+                        app:tint="@color/ColorPrincipal"
+                        android:contentDescription="@string/completado" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Ejercicio 4: Tricep Pushdown (PENDIENTE)  -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardEjercicio4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="#1E1E1E"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="6dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tricep Pushdown"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:layout_marginEnd="8dp" />
+
+                            <!-- Badge "Triceps" color diferente (también amarillo según imagen) -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Triceps"
+                                android:textColor="#121212"
+                                android:textSize="11sp"
+                                android:fontFamily="sans-serif-bold"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="3dp"
+                                android:background="@drawable/bg_badge_yellow" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_4_sets_12_reps_25kg"
+                            android:textColor="@color/GrisTexto"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <!-- Check PENDIENTE: círculo outline gris sin relleno -->
+                    <!-- ICONO: ic_radio_button_unchecked o circle outline -->
+                    <ImageView
+                        android:id="@+id/ivCheck4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_fire"
+                        app:tint="@color/ColorPrincipal"
+                        android:contentDescription="Pendiente" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Ejercicio 5: Overhead Extension (PENDIENTE)  -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardEjercicio5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="@color/FondoGris"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="6dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Overhead Extension"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:layout_marginEnd="8dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Triceps"
+                                android:textColor="@color/GrisTexto"
+                                android:textSize="11sp"
+                                android:fontFamily="sans-serif-bold"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="3dp"
+                                android:background="@drawable/bg_badge_yellow" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_3_sets_12_reps_20kg"
+                            android:textColor="@color/GrisTexto"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivCheck5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_fire"
+                        app:tint="@color/ColorPrincipal"
+                        android:contentDescription="@string/pendiente" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

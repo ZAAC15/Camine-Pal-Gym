@@ -27,7 +27,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/bg_avatar"
-                android:text="JR"
+                android:text="@string/jr"
                 android:textColor="@color/white"
                 android:gravity="center"
                 android:textStyle="bold"
@@ -52,7 +52,7 @@
                     android:id="@+id/tvTiempo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2 hours ago"
+                    android:text="@string/_2_hours_ago"
                     android:textColor="#AAAAAA"
                     android:textSize="12sp"/>
 

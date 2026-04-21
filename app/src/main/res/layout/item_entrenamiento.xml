@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/FondoGris"
+    android:layout_marginBottom="10dp"
+    android:padding="14dp">
+
+    <!-- Fila superior: icono + nombre + categoria -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="6dp">
+
+        <!-- Icono del ejercicio -->
+        <ImageView
+            android:id="@+id/ivIconoEjercicio"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@android:drawable/ic_menu_compass"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Nombre y series/reps -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNombreEjercicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/press_de_banca"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDetalleEjercicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_4_series_10_repeticiones_80kg"
+                android:textColor="@color/GrisTexto"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <!-- Etiqueta de categoría -->
+        <TextView
+            android:id="@+id/tvCategoriaEjercicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empuje"
+            android:textColor="@android:color/white"
+            android:textSize="11sp"
+            android:background="@color/background"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp" />
+
+    </LinearLayout>
+
+    <!-- Barra de progreso amarilla -->
+    <View
+        android:id="@+id/barraProgreso"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/ColorPrincipal"
+        android:layout_marginTop="6dp" />
+
+</LinearLayout>

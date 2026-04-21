@@ -5,56 +5,103 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.caminepalgym.R
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [EntrenamientoFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class EntrenamientoFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var recyclerEntrenamientos: RecyclerView
+    private lateinit var fabAgregar: ExtendedFloatingActionButton
 
+    private lateinit var chipTodos: Button
+    private lateinit var chipEmpuje: Button
+    private lateinit var chipJalon: Button
+    private lateinit var chipPierna: Button
+    private lateinit var chipAbdomen: Button
+
+    // ── Lista completa de ejercicios (datos de ejemplo) ──────────
+    private val listaCompleta = listOf(
+        Ejercicio("Press de banca",  4, 10, "80kg",          "Empuje"),
+        Ejercicio("Sentadillas",     4, 10, "120kg",         "Pierna"),
+        Ejercicio("Peso muerto",     6,  6, "140kg",         "Jalón"),
+        Ejercicio("Dominadas",       4, 12, "peso corporal", "Jalón"),
+        Ejercicio("Press militar",   3, 10, "40kg",          "Empuje"),
+        Ejercicio("Curl de bíceps",  3, 12, "15kg",          "Jalón"),
+        Ejercicio("Extensión tricep",3, 12, "20kg",          "Empuje"),
+        Ejercicio("Zancadas",        3, 10, "60kg",          "Pierna"),
+        Ejercicio("Plancha",         4,  1, "60 seg",        "Abdomen"),
+        Ejercicio("Crunch",          3, 20, "peso corporal", "Abdomen")
+    )
+
+    private lateinit var adapter: EntrenamientoAdapter
+
+    // ─────────────────────────────────────────────────────────────
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_entrenamiento, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment EntrenamientoFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            EntrenamientoFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // RecyclerView + adaptador
+        recyclerEntrenamientos = view.findViewById(R.id.recyclerEntrenamientos)
+        recyclerEntrenamientos.layoutManager = LinearLayoutManager(requireContext())
+        adapter = EntrenamientoAdapter(listaCompleta)
+        recyclerEntrenamientos.adapter = adapter
+
+        // FAB
+        fabAgregar = view.findViewById(R.id.fabAgregar)
+        fabAgregar.setOnClickListener {
+            // aquí abres el dialog o activity para agregar entrenamiento
+        }
+
+        // Chips / filtros
+        chipTodos   = view.findViewById(R.id.chipTodos)
+        chipEmpuje  = view.findViewById(R.id.chipEmpuje)
+        chipJalon   = view.findViewById(R.id.chipJalon)
+        chipPierna  = view.findViewById(R.id.chipPierna)
+        chipAbdomen = view.findViewById(R.id.chipAbdomen)
+
+        chipTodos.setOnClickListener   { seleccionarChip("Todos") }
+        chipEmpuje.setOnClickListener  { seleccionarChip("Empuje") }
+        chipJalon.setOnClickListener   { seleccionarChip("Jalón") }
+        chipPierna.setOnClickListener  { seleccionarChip("Pierna") }
+        chipAbdomen.setOnClickListener { seleccionarChip("Abdomen") }
+
+        // Seleccionar "Todos" por defecto
+        seleccionarChip("Todos")
+    }
+
+    // ── Lógica de chips ──────────────────────────────────────────
+    private fun seleccionarChip(categoria: String) {
+        val chips      = listOf(chipTodos, chipEmpuje, chipJalon, chipPierna, chipAbdomen)
+        val categorias = listOf("Todos", "Empuje", "Jalón", "Pierna", "Abdomen")
+
+        chips.forEachIndexed { index, chip ->
+            if (categorias[index] == categoria) {
+                chip.setBackgroundColor(requireContext().getColor(R.color.ColorPrincipal))
+                chip.setTextColor(requireContext().getColor(R.color.background))
+            } else {
+                chip.setBackgroundColor(requireContext().getColor(R.color.FondoGris))
+                chip.setTextColor(requireContext().getColor(R.color.white))
             }
+        }
+
+        filtrarPorCategoria(categoria)
+    }
+
+    private fun filtrarPorCategoria(categoria: String) {
+        val filtrada = if (categoria == "Todos") {
+            listaCompleta
+        } else {
+            listaCompleta.filter { it.categoria == categoria }
+        }
+        adapter.actualizarLista(filtrada)
     }
 }

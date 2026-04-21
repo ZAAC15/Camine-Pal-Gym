@@ -1,5 +1,6 @@
 package com.caminepalgym.ui.inicio
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -36,6 +37,23 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val cardPlan = view.findViewById<View>(R.id.cardPlanHoy)
+
+        cardPlan.setOnClickListener {
+            val intent = Intent(requireContext(), PlanDeHoyActivity::class.java)
+            startActivity(intent)
+        }
+        val cardMetricas = view.findViewById<View>(R.id.cardMetricas)
+
+        cardMetricas.setOnClickListener {
+            val intent = Intent(requireContext(), EditarMedidaActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     companion object {

@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0D0D0D">
+    android:background="@color/FondoGris">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Nueva publicación"
+                android:text="@string/nueva_publicaci_n"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:gravity="center"/>
@@ -36,9 +36,9 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Post"
+                android:text="@string/post"
                 android:backgroundTint="@color/ColorPrincipal"
-                android:textColor="#000"/>
+                android:textColor="@color/black"/>
         </LinearLayout>
 
         <!-- TABS -->
@@ -55,9 +55,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Texto"
+                android:text="@string/texto"
                 android:gravity="center"
-                android:textColor="#000"
+                android:textColor="@color/black"
                 android:background="@drawable/bg_chip_selected"
                 android:padding="8dp"/>
 
@@ -66,7 +66,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Foto"
+                android:text="@string/foto"
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:padding="8dp"/>
@@ -84,7 +84,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/bg_avatar"
-                android:text="JD"
+                android:text="@string/jd"
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:textStyle="bold"/>
@@ -98,7 +98,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Brayan Juanito"
+                    android:text="@string/brayan_juanito"
                     android:textColor="@color/white"
                     android:textStyle="bold"/>
 
@@ -106,7 +106,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/brayan_juanito"
-                    android:textColor="#888"
+                    android:textColor="@color/GrisTexto"
                     android:textSize="12sp"/>
             </LinearLayout>
         </LinearLayout>
@@ -115,9 +115,9 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Añadir un título (Opcional)"
+            android:hint="@string/a_adir_un_t_tulo_opcional"
             android:textColor="@color/white"
-            android:textColorHint="#777"
+            android:textColorHint="@color/GrisTexto"
             android:background="@android:color/transparent"
             android:layout_marginTop="16dp"/>
 
@@ -125,9 +125,9 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:hint="¿Qué estás pensando? Comparte tus experiencias..."
+            android:hint="@string/qu_est_s_pensando_comparte_tus_experiencias"
             android:textColor="@color/white"
-            android:textColorHint="#777"
+            android:textColorHint="@color/GrisTexto"
             android:gravity="top"
             android:background="@drawable/bg_chip"
             android:padding="10dp"
@@ -144,15 +144,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Click para agregar imagen"
-                android:textColor="#888"/>
+                android:text="@string/click_para_agregar_imagen"
+                android:textColor="@color/GrisTexto"/>
         </LinearLayout>
 
         <!-- ETIQUETAS -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Etiquetas"
+            android:text="@string/etiquetas"
             android:textColor="@color/white"
             android:layout_marginTop="16dp"/>
 
@@ -165,7 +165,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Entrenamiento"
+                android:text="@string/entrenamiento"
                 android:background="@drawable/bg_chip"
                 android:textColor="@color/white"
                 android:padding="8dp"
@@ -174,7 +174,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nutrición"
+                android:text="@string/nutrici_n"
                 android:background="@drawable/bg_chip"
                 android:textColor="@color/white"
                 android:padding="8dp"
@@ -183,7 +183,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Progreso"
+                android:text="@string/progreso"
                 android:background="@drawable/bg_chip"
                 android:textColor="@color/white"
                 android:padding="8dp"/>

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.caminepalgym.R
+import com.caminepalgym.ui.auth.LoginActivity
 import com.caminepalgym.ui.main.admin.PanelAdminActivity
 import kotlin.jvm.java
 
@@ -46,7 +47,11 @@ class PerfilFragment : Fragment() {
         }
 
         view.findViewById<View>(R.id.itemCerrarSesion).setOnClickListener {
-            // aquí va tu lógica de cerrar sesión
+            val intent = Intent(requireContext(), LoginActivity::class.java)
+
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+            startActivity(intent)
         }
     }
 }

@@ -33,7 +33,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Mi carrito"
+                android:text="@string/mi_carrito"
                 android:textColor="@android:color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -62,7 +62,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Codigo de descuento"
+                android:text="@string/codigo_de_descuento"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp" />
@@ -77,7 +77,7 @@
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:hint="Ingrese código"
+                    android:hint="@string/ingrese_c_digo"
                     android:textColor="@android:color/white"
                     android:textColorHint="@color/GrisTexto"
                     android:background="@color/background"
@@ -87,7 +87,7 @@
                     android:id="@+id/btnAplicar"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:text="Aplicar"
+                    android:text="@string/aplicar"
                     android:layout_marginStart="8dp"
                     android:backgroundTint="@color/ColorPrincipal"
                     android:textColor="@color/background" />
@@ -106,7 +106,7 @@
             android:layout_marginBottom="16dp">
 
             <TextView
-                android:text="Resumen de orden"
+                android:text="@string/resumen_de_orden"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"
@@ -114,19 +114,19 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:text="Subtotal"
+                android:text="@string/subtotal"
                 android:textColor="@android:color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:text="Envío Gratis"
+                android:text="@string/env_o_gratis"
                 android:textColor="@color/ColorPrincipal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:text="Total"
+                android:text="@string/total"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
                 android:textSize="18sp"
@@ -141,7 +141,7 @@
             android:id="@+id/btnPagar"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:text="Procede con el pago"
+            android:text="@string/procede_con_el_pago"
             android:backgroundTint="@color/ColorPrincipal"
             android:textColor="@color/background"
             android:textStyle="bold" />

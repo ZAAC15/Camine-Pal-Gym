@@ -44,7 +44,7 @@
                     android:id="@+id/tvUsuario"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Juan Rojas"
+                    android:text="@string/juan_rojas"
                     android:textColor="@color/white"
                     android:textStyle="bold"/>
 
@@ -53,7 +53,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/_2_hours_ago"
-                    android:textColor="#AAAAAA"
+                    android:textColor="@color/GrisTexto"
                     android:textSize="12sp"/>
 
             </LinearLayout>
@@ -65,7 +65,7 @@
             android:id="@+id/tvContenido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Contenido del post"
+            android:text="@string/contenido_del_post"
             android:textColor="@color/white"
             android:layout_marginTop="8dp"/>
 

@@ -32,7 +32,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Tema"
+                android:text="@string/tema"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -43,7 +43,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Color de acento"
+            android:text="@string/color_de_acento"
             android:textColor="@color/GrisTexto"
             android:textSize="13sp"
             android:layout_marginBottom="12dp" />
@@ -81,7 +81,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Dorado"
+                        android:text="@string/dorado"
                         android:textColor="@color/GrisTexto"
                         android:textSize="10sp"
                         android:layout_marginTop="4dp" />
@@ -105,7 +105,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Azul"
+                        android:text="@string/azul"
                         android:textColor="@color/GrisTexto"
                         android:textSize="10sp"
                         android:layout_marginTop="4dp" />
@@ -129,7 +129,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Verde"
+                        android:text="@string/verde"
                         android:textColor="@color/GrisTexto"
                         android:textSize="10sp"
                         android:layout_marginTop="4dp" />
@@ -153,7 +153,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Morado"
+                        android:text="@string/morado"
                         android:textColor="@color/GrisTexto"
                         android:textSize="10sp"
                         android:layout_marginTop="4dp" />
@@ -177,7 +177,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Naranja"
+                        android:text="@string/naranja"
                         android:textColor="@color/GrisTexto"
                         android:textSize="10sp"
                         android:layout_marginTop="4dp" />
@@ -201,7 +201,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Rojo"
+                        android:text="@string/rojo"
                         android:textColor="@color/GrisTexto"
                         android:textSize="10sp"
                         android:layout_marginTop="4dp" />
@@ -216,7 +216,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tamaño de la fuente"
+            android:text="@string/tama_o_de_la_fuente"
             android:textColor="@color/GrisTexto"
             android:textSize="13sp"
             android:layout_marginBottom="12dp" />
@@ -238,7 +238,7 @@
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:text="small"
+                    android:text="@string/small"
                     android:textColor="@color/white"
                     android:backgroundTint="@color/background"
                     android:layout_marginEnd="4dp" />
@@ -248,7 +248,7 @@
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:text="medium"
+                    android:text="@string/medium"
                     android:textColor="@color/background"
                     android:backgroundTint="@color/ColorPrincipal"
                     android:layout_marginHorizontal="4dp" />
@@ -258,7 +258,7 @@
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:text="largo"
+                    android:text="@string/largo"
                     android:textColor="@color/white"
                     android:backgroundTint="@color/background"
                     android:layout_marginStart="4dp" />
@@ -268,7 +268,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tamaño default de la fuente"
+                android:text="@string/tama_o_default_de_la_fuente"
                 android:textColor="@color/GrisTexto"
                 android:textSize="12sp"
                 android:gravity="center"

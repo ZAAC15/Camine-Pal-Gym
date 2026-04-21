@@ -21,7 +21,7 @@
             android:id="@+id/ivBack"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_access_time"
+            android:src="@android:drawable/ic_menu_revert"
             app:tint="@color/white"
             android:contentDescription="@string/atr_s"
             android:layout_marginEnd="12dp" />
@@ -30,7 +30,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Plan de hoy"
+            android:text="@string/plan_de_hoy"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:fontFamily="sans-serif-bold" />
@@ -40,9 +40,9 @@
             android:id="@+id/ivBuscar"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_body_model"
+            android:src="@drawable/ic_access_time"
             app:tint="@color/white"
-            android:contentDescription="Buscar" />
+            android:contentDescription="@string/buscar" />
     </LinearLayout>
 
     <!-- ========== SCROLL PRINCIPAL ========== -->
@@ -64,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                app:cardBackgroundColor="#1E1E1E"
+                app:cardBackgroundColor="@color/Gris2"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="0dp">
 
@@ -91,7 +91,7 @@
                                 android:id="@+id/tvNombreDia"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Dia de empuje"
+                                android:text="@string/dia_de_empuje"
                                 android:textColor="@color/white"
                                 android:textSize="18sp"
                                 android:fontFamily="sans-serif-bold" />
@@ -100,8 +100,8 @@
                                 android:id="@+id/tvFocoDia"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Enfocado en Pecho y Tricep"
-                                android:textColor="#888888"
+                                android:text="@string/enfocado_en_pecho_y_tricep"
+                                android:textColor="@color/GrisTexto"
                                 android:textSize="13sp"
                                 android:layout_marginTop="2dp" />
                         </LinearLayout>
@@ -122,7 +122,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="#2A2A2A"
+                        android:background="@color/GrisTexto"
                         android:layout_marginVertical="14dp" />
 
                     <!-- Progreso label + contador -->
@@ -137,8 +137,8 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Progreso"
-                            android:textColor="#888888"
+                            android:text="@string/progreso"
+                            android:textColor="@color/GrisTexto"
                             android:textSize="13sp" />
 
                         <!-- "3/6 ejercicios" — el número amarillo -->
@@ -146,8 +146,8 @@
                             android:id="@+id/tvProgresoEjercicios"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="3/6 ejercicios"
-                            android:textColor="#F5C518"
+                            android:text="@string/_3_6_ejercicios"
+                            android:textColor="@color/ColorPrincipal"
                             android:textSize="13sp"
                             android:fontFamily="sans-serif-bold" />
                     </LinearLayout>
@@ -175,15 +175,15 @@
                             android:layout_width="16dp"
                             android:layout_height="16dp"
                             android:src="@drawable/ic_access_time"
-                            app:tint="#888888"
-                            android:contentDescription="Duración"
+                            app:tint="@color/GrisTexto"
+                            android:contentDescription="@string/duraci_n"
                             android:layout_marginEnd="4dp" />
 
                         <TextView
                             android:id="@+id/tvDuracion"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="65 min"
+                            android:text="@string/_65_min"
                             android:textColor="#888888"
                             android:textSize="13sp"
                             android:layout_marginEnd="16dp" />
@@ -214,7 +214,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                app:cardBackgroundColor="#1E1E1E"
+                app:cardBackgroundColor="@color/Gris2"
                 app:cardCornerRadius="14dp"
                 app:cardElevation="0dp">
 
@@ -242,7 +242,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Press plano"
+                                android:text="@string/press_plano"
                                 android:textColor="@color/white"
                                 android:textSize="15sp"
                                 android:fontFamily="sans-serif-medium"
@@ -252,7 +252,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Chest"
+                                android:text="@string/chest"
                                 android:textColor="@color/white"
                                 android:textSize="11sp"
                                 android:fontFamily="sans-serif-bold"
@@ -264,8 +264,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="4 sets × 12 reps × 80kg"
-                            android:textColor="#888888"
+                            android:text="@string/_4_sets_12_reps_80kg"
+                            android:textColor="@color/GrisTexto"
                             android:textSize="13sp" />
                     </LinearLayout>
 
@@ -287,7 +287,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                app:cardBackgroundColor="#1E1E1E"
+                app:cardBackgroundColor="@color/Gris2"
                 app:cardCornerRadius="14dp"
                 app:cardElevation="0dp">
 
@@ -307,7 +307,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Press inclinado con\nmancuernas"
+                            android:text="@string/press_inclinado_con_nmancuernas"
                             android:textColor="@color/white"
                             android:textSize="15sp"
                             android:fontFamily="sans-serif-medium"
@@ -322,7 +322,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Chest"
+                                android:text="@string/chest"
                                 android:textColor="#121212"
                                 android:textSize="11sp"
                                 android:fontFamily="sans-serif-bold"
@@ -334,8 +334,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="3 sets × 10 reps × 32kg"
-                                android:textColor="#888888"
+                                android:text="@string/_3_sets_10_reps_32kg"
+                                android:textColor="@color/GrisTexto"
                                 android:textSize="13sp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -346,7 +346,7 @@
                         android:layout_height="30dp"
                         android:src="@drawable/ic_fire"
                         app:tint="@color/ColorPrincipal"
-                        android:contentDescription="Completado" />
+                        android:contentDescription="@string/completado" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -356,7 +356,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                app:cardBackgroundColor="#1E1E1E"
+                app:cardBackgroundColor="@color/Gris2"
                 app:cardCornerRadius="14dp"
                 app:cardElevation="0dp">
 
@@ -383,7 +383,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Cable Flyes"
+                                android:text="@string/cable_flyes"
                                 android:textColor="@color/white"
                                 android:textSize="15sp"
                                 android:fontFamily="sans-serif-medium"
@@ -392,8 +392,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Chest"
-                                android:textColor="#121212"
+                                android:text="@string/chest"
+                                android:textColor="@color/FondoGris"
                                 android:textSize="11sp"
                                 android:fontFamily="sans-serif-bold"
                                 android:paddingHorizontal="10dp"
@@ -404,8 +404,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="3 sets × 15 reps × 15kg"
-                            android:textColor="#888888"
+                            android:text="@string/_3_sets_15_reps_15kg"
+                            android:textColor="@color/GrisTexto"
                             android:textSize="13sp" />
                     </LinearLayout>
 
@@ -425,7 +425,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                app:cardBackgroundColor="#1E1E1E"
+                app:cardBackgroundColor="@color/Gris2"
                 app:cardCornerRadius="14dp"
                 app:cardElevation="0dp">
 
@@ -452,7 +452,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Tricep Pushdown"
+                                android:text="@string/tricep_pushdown"
                                 android:textColor="@color/white"
                                 android:textSize="15sp"
                                 android:fontFamily="sans-serif-medium"
@@ -462,8 +462,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Triceps"
-                                android:textColor="#121212"
+                                android:text="@string/triceps"
+                                android:textColor="@color/FondoGris"
                                 android:textSize="11sp"
                                 android:fontFamily="sans-serif-bold"
                                 android:paddingHorizontal="10dp"
@@ -487,7 +487,7 @@
                         android:layout_height="30dp"
                         android:src="@drawable/ic_fire"
                         app:tint="@color/ColorPrincipal"
-                        android:contentDescription="Pendiente" />
+                        app:contentDescription="Pendiente" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -497,7 +497,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                app:cardBackgroundColor="@color/FondoGris"
+                app:cardBackgroundColor="@color/Gris2"
                 app:cardCornerRadius="14dp"
                 app:cardElevation="0dp">
 
@@ -524,7 +524,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Overhead Extension"
+                                android:text="@string/overhead_extension"
                                 android:textColor="@color/white"
                                 android:textSize="15sp"
                                 android:fontFamily="sans-serif-medium"
@@ -533,7 +533,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Triceps"
+                                android:text="@string/triceps"
                                 android:textColor="@color/GrisTexto"
                                 android:textSize="11sp"
                                 android:fontFamily="sans-serif-bold"

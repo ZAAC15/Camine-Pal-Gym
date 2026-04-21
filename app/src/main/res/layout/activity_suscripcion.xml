@@ -32,7 +32,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Suscripción"
+                android:text="@string/suscripci_n"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -71,7 +71,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="PRO Plan"
+                    android:text="@string/pro_plan"
                     android:textColor="@color/white"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -80,7 +80,7 @@
                     android:id="@+id/tvBadgeActivo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ACTIVO"
+                    android:text="@string/activo"
                     android:textColor="@color/background"
                     android:textSize="11sp"
                     android:textStyle="bold"
@@ -94,7 +94,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="$15.000"
+                android:text="@string/_15_000"
                 android:textColor="@color/white"
                 android:textSize="28sp"
                 android:textStyle="bold" />
@@ -102,7 +102,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="/Mes"
+                android:text="@string/mes"
                 android:textColor="@color/GrisTexto"
                 android:textSize="13sp"
                 android:layout_marginBottom="4dp" />
@@ -111,7 +111,7 @@
                 android:id="@+id/tvRenovacion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Renueva en Marzo 22, 2026"
+                android:text="@string/renueva_en_marzo_22_2026"
                 android:textColor="@color/GrisTexto"
                 android:textSize="12sp"
                 android:layout_marginBottom="12dp" />
@@ -120,7 +120,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Características incluidas"
+                android:text="@string/caracter_sticas_incluidas"
                 android:textColor="@color/white"
                 android:textSize="13sp"
                 android:textStyle="bold"
@@ -142,7 +142,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Seguimiento detallado del entrenamiento"
+                    android:text="@string/seguimiento_detallado_del_entrenamiento"
                     android:textColor="@color/white"
                     android:textSize="13sp" />
 
@@ -164,7 +164,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Perspectivas de coaching impulsadas por IA"
+                    android:text="@string/perspectivas_de_coaching_impulsadas_por_ia"
                     android:textColor="@color/white"
                     android:textSize="13sp" />
 
@@ -186,7 +186,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Análisis corporal avanzado"
+                    android:text="@string/an_lisis_corporal_avanzado"
                     android:textColor="@color/white"
                     android:textSize="13sp" />
 
@@ -208,7 +208,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Atención al cliente prioritaria"
+                    android:text="@string/atenci_n_al_cliente_prioritaria"
                     android:textColor="@color/white"
                     android:textSize="13sp" />
 
@@ -230,7 +230,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Experiencia sin publicidad"
+                    android:text="@string/experiencia_sin_publicidad"
                     android:textColor="@color/white"
                     android:textSize="13sp" />
 
@@ -251,7 +251,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Programas de entrenamiento exclusivos"
+                    android:text="@string/programas_de_entrenamiento_exclusivos"
                     android:textColor="@color/white"
                     android:textSize="13sp" />
 
@@ -280,7 +280,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Cambia a anual"
+                    android:text="@string/cambia_a_anual"
                     android:textColor="@color/white"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -288,7 +288,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="AHORRA 40%"
+                    android:text="@string/ahorra_40"
                     android:textColor="@color/background"
                     android:textSize="11sp"
                     android:textStyle="bold"
@@ -301,7 +301,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="$108.000"
+                android:text="@string/_108_000"
                 android:textColor="@color/white"
                 android:textSize="26sp"
                 android:textStyle="bold" />
@@ -309,14 +309,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="/Año"
+                android:text="@string/a_o"
                 android:textColor="@color/GrisTexto"
                 android:textSize="13sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Solamente $0.00/Anual — Ahorra $47.99 al año"
+                android:text="@string/solamente_0_00_anual_ahorra_47_99_al_a_o"
                 android:textColor="@color/GrisTexto"
                 android:textSize="12sp"
                 android:layout_marginBottom="14dp" />
@@ -325,7 +325,7 @@
                 android:id="@+id/btnSuscribirAnual"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="⚡ Suscríbete y ahorra 40%"
+                android:text="@string/suscr_bete_y_ahorra_40"
                 android:backgroundTint="@color/ColorPrincipal"
                 android:textColor="@color/background"
                 android:textStyle="bold" />
@@ -336,7 +336,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Historial de compras"
+            android:text="@string/historial_de_compras"
             android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -359,7 +359,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PRO Mensual"
+                    android:text="@string/pro_mensual"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -367,7 +367,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ene 22, 2025"
+                    android:text="@string/ene_22_2025"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp" />
 
@@ -382,7 +382,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="$15.000"
+                    android:text="@string/_15_000"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -390,7 +390,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pagado"
+                    android:text="@string/pagado"
                     android:textColor="@color/ColorVerde"
                     android:textSize="12sp" />
 
@@ -415,7 +415,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PRO Mensual"
+                    android:text="@string/pro_mensual"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -423,7 +423,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dic 22, 2023"
+                    android:text="@string/dic_22_2023"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp" />
 
@@ -438,7 +438,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="$15.000"
+                    android:text="@string/_15_000"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -446,7 +446,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pagado"
+                    android:text="@string/pagado"
                     android:textColor="@color/ColorVerde"
                     android:textSize="12sp" />
 
@@ -471,7 +471,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PRO Mensual"
+                    android:text="@string/pro_mensual"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -479,7 +479,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nov 22, 2025"
+                    android:text="@string/nov_22_2025"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp" />
 
@@ -494,7 +494,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="$15.000"
+                    android:text="@string/_15_000"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -502,7 +502,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pagado"
+                    android:text="@string/pagado"
                     android:textColor="@color/ColorVerde"
                     android:textSize="12sp" />
 
@@ -515,7 +515,7 @@
             android:id="@+id/tvCancelarSuscripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cancelar Suscripción"
+            android:text="@string/cancelar_suscripci_n"
             android:textColor="@color/GrisTexto"
             android:textSize="13sp"
             android:gravity="center"

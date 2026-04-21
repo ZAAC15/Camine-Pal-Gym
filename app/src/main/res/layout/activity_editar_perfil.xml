@@ -32,7 +32,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Editar Perfil"
+                android:text="@string/editar_perfil"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -63,7 +63,7 @@
                 <TextView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:text="BJ"
+                    android:text="@string/bj"
                     android:textColor="@color/white"
                     android:textSize="26sp"
                     android:textStyle="bold"
@@ -84,7 +84,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Change Photo"
+                android:text="@string/change_photo"
                 android:textColor="@color/ColorPrincipal"
                 android:textSize="13sp"
                 android:layout_marginTop="8dp" />
@@ -95,7 +95,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Información personal"
+            android:text="@string/informaci_n_personal"
             android:textColor="@color/GrisTexto"
             android:textSize="13sp"
             android:textStyle="bold"
@@ -120,7 +120,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nombres"
+                    android:text="@string/nombres"
                     android:textColor="@color/GrisTexto"
                     android:textSize="11sp"
                     android:layout_marginBottom="4dp" />
@@ -129,7 +129,7 @@
                     android:id="@+id/etNombres"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Brayan"
+                    android:text="@string/brayan"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:background="@null"
@@ -149,7 +149,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Apellido"
+                    android:text="@string/apellido"
                     android:textColor="@color/GrisTexto"
                     android:textSize="11sp"
                     android:layout_marginBottom="4dp" />
@@ -158,7 +158,7 @@
                     android:id="@+id/etApellido"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Juanito"
+                    android:text="@string/juanito"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:background="@null"
@@ -180,7 +180,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombre de usuario"
+                android:text="@string/nombre_de_usuario"
                 android:textColor="@color/GrisTexto"
                 android:textSize="11sp"
                 android:layout_marginBottom="4dp" />
@@ -189,7 +189,7 @@
                 android:id="@+id/etUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@JuanitoBrayan"
+                android:text="@string/brayan_juanito"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:background="@null"
@@ -209,7 +209,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Biografía"
+                android:text="@string/biograf_a"
                 android:textColor="@color/GrisTexto"
                 android:textSize="11sp"
                 android:layout_marginBottom="4dp" />
@@ -218,7 +218,7 @@
                 android:id="@+id/etBiografia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Entusiasta del fitness. Levantando pesas desde 2019. Siempre buscando récords personales 💪"
+                android:text="@string/entusiasta_del_fitness_levantando_pesas_desde_2019_siempre_buscando_r_cords_personales"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:background="@null"
@@ -240,7 +240,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email"
+                android:text="@string/email"
                 android:textColor="@color/GrisTexto"
                 android:textSize="11sp"
                 android:layout_marginBottom="4dp" />
@@ -249,7 +249,7 @@
                 android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="brayanjuanito@gmail.com"
+                android:text="@string/brayanjuanito_gmail_com"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:background="@null"
@@ -270,7 +270,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Celular"
+                android:text="@string/celular"
                 android:textColor="@color/GrisTexto"
                 android:textSize="11sp"
                 android:layout_marginBottom="4dp" />
@@ -279,7 +279,7 @@
                 android:id="@+id/etCelular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="3187444444"
+                android:text="@string/_3187444444"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:background="@null"
@@ -307,7 +307,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fecha cumpleaños"
+                    android:text="@string/fecha_cumplea_os"
                     android:textColor="@color/GrisTexto"
                     android:textSize="11sp"
                     android:layout_marginBottom="4dp" />
@@ -316,7 +316,7 @@
                     android:id="@+id/tvFechaCumple"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2003-06-09"
+                    android:text="@string/_2003_06_09"
                     android:textColor="@color/white"
                     android:textSize="14sp" />
 
@@ -333,7 +333,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Perfil Fitness"
+            android:text="@string/perfil_fitness"
             android:textColor="@color/GrisTexto"
             android:textSize="13sp"
             android:textStyle="bold"
@@ -358,7 +358,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Altura (cm)"
+                    android:text="@string/altura_cm"
                     android:textColor="@color/GrisTexto"
                     android:textSize="11sp"
                     android:layout_marginBottom="4dp" />
@@ -367,7 +367,7 @@
                     android:id="@+id/etAltura"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="182"
+                    android:text="@string/_182"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:background="@null"
@@ -388,7 +388,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Peso (kg)"
+                    android:text="@string/peso_kg"
                     android:textColor="@color/GrisTexto"
                     android:textSize="11sp"
                     android:layout_marginBottom="4dp" />
@@ -397,7 +397,7 @@
                     android:id="@+id/etPeso"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="78"
+                    android:text="@string/_78"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:background="@null"
@@ -420,7 +420,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Meta principal"
+                android:text="@string/meta_principal"
                 android:textColor="@color/GrisTexto"
                 android:textSize="11sp"
                 android:layout_marginBottom="4dp" />
@@ -438,7 +438,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Redes sociales"
+            android:text="@string/redes_sociales"
             android:textColor="@color/GrisTexto"
             android:textSize="13sp"
             android:textStyle="bold"
@@ -456,7 +456,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Instagram"
+                android:text="@string/instagram"
                 android:textColor="@color/GrisTexto"
                 android:textSize="11sp"
                 android:layout_marginBottom="4dp" />
@@ -465,7 +465,7 @@
                 android:id="@+id/etInstagram"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@brayanjuanito_fit"
+                android:hint="@string/brayanjuanito_fit"
                 android:textColor="@color/white"
                 android:textColorHint="@color/GrisTexto"
                 android:textSize="14sp"
@@ -486,7 +486,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Twitter / X"
+                android:text="@string/twitter_x"
                 android:textColor="@color/GrisTexto"
                 android:textSize="11sp"
                 android:layout_marginBottom="4dp" />
@@ -495,7 +495,7 @@
                 android:id="@+id/etTwitter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@juanitobrayan"
+                android:hint="@string/brayan_juanito"
                 android:textColor="@color/white"
                 android:textColorHint="@color/GrisTexto"
                 android:textSize="14sp"
@@ -509,7 +509,7 @@
             android:id="@+id/btnGuardarCambios"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:text="Guardar Cambios"
+            android:text="@string/guardar_cambios"
             android:backgroundTint="@color/ColorPrincipal"
             android:textColor="@color/background"
             android:textStyle="bold" />

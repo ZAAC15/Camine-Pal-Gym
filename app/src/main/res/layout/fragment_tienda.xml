@@ -31,7 +31,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Tienda"
+                    android:text="@string/tienda"
                     android:textColor="@android:color/white"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -57,7 +57,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Consultar tiendas cerca a ti"
+                    android:text="@string/consultar_tiendas_cerca_a_ti"
                     android:backgroundTint="@color/ColorPrincipal"
                     android:textColor="@color/background"/>
 
@@ -75,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@color/FondoGris"
-                android:hint="Buscar productos..."
+                android:hint="@string/buscar_productos"
                 android:textColor="@android:color/white"
                 android:textColorHint="@color/GrisTexto"
                 android:padding="12dp"
@@ -92,7 +92,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Todos"
+                    android:text="@string/todos"
                     android:backgroundTint="@color/ColorPrincipal"
                     android:textColor="@color/background"
                     android:textSize="10sp"/>
@@ -101,7 +101,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Suplementos"
+                    android:text="@string/suplementos"
                     android:backgroundTint="@color/FondoGris"
                     android:textColor="@android:color/white"
                     android:textSize="10sp"/>
@@ -110,7 +110,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Equipo"
+                    android:text="@string/equipo"
                     android:backgroundTint="@color/FondoGris"
                     android:textColor="@android:color/white"
                     android:textSize="10sp"/>
@@ -119,7 +119,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Ropa"
+                    android:text="@string/ropa"
                     android:backgroundTint="@color/FondoGris"
                     android:textColor="@android:color/white"
                     android:textSize="10sp"/>

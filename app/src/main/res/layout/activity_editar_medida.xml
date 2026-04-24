@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#121212">
-    <!-- ========== HEADER - FLECHA ATRÁS + TÍTULO ========== -->
+    <!-- HEADER FLECHA ATRAS Y TITULO -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,7 +15,7 @@
         android:paddingTop="24dp"
         android:paddingBottom="8dp">
 
-        <!-- ICONO: Flecha hacia atrás -->
+        <!-- icono Flecha hacia atras -->
         <ImageView
             android:id="@+id/ivBack"
             android:layout_width="24dp"
@@ -34,7 +34,7 @@
             android:fontFamily="sans-serif-bold" />
     </LinearLayout>
 
-    <!-- Subtítulo instrucción -->
+    <!-- Subtitulo instrucciOn -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
         android:paddingTop="8dp"
         android:paddingBottom="24dp" />
 
-    <!-- ========== SCROLL CON FORMULARIO ========== -->
+    <!-- SCROLL CON FORMULARIO  -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -59,7 +59,7 @@
             android:paddingHorizontal="20dp"
             android:paddingBottom="24dp">
 
-            <!-- ===== CAMPO: ALTURA ===== -->
+            <!-- CAMPO: ALTURA -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilAltura"
                 android:layout_width="match_parent"
@@ -89,7 +89,7 @@
                     android:paddingVertical="16dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- ===== CAMPO: PESO ===== -->
+            <!-- CAMPO PESO -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilPeso"
                 android:layout_width="match_parent"
@@ -107,7 +107,7 @@
                 app:startIconTint="@color/GrisTexto"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                <!-- ICONO: ic_monitor_weight o ic_fitness_center (balanza/peso) -->
+                <!-- icono ic_monitor_weight o ic_fitness_center (balanza/peso) -->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etPeso"
                     android:layout_width="match_parent"
@@ -120,7 +120,7 @@
                     android:paddingVertical="16dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- ===== CAMPO: EDAD ===== -->
+            <!-- CAMPO EDAD -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilEdad"
                 android:layout_width="match_parent"
@@ -138,7 +138,7 @@
                 app:startIconTint="@color/GrisTexto"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                <!-- ICONO: ic_calendar_today o ic_event (calendario) -->
+                <!-- icono ic_calendar_today o ic_event (calendario) -->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etEdad"
                     android:layout_width="match_parent"
@@ -151,7 +151,7 @@
                     android:paddingVertical="16dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- ===== CAMPO: PORCENTAJE DE GRASA ===== -->
+            <!-- PORCENTAJE DE GRASA -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilGrasa"
                 android:layout_width="match_parent"
@@ -169,7 +169,7 @@
                 app:startIconTint="@color/GrisTexto"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                <!-- ICONO: ic_percent o signo % -->
+                <!-- icono ic_percent o signo % -->
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etGrasa"
                     android:layout_width="match_parent"
@@ -207,7 +207,7 @@
                     android:fontFamily="sans-serif-bold" />
             </LinearLayout>
 
-            <!-- ===== DROPDOWN: SEXO BIOLÓGICO ===== -->
+            <!-- SEXO BIOLÓGICO-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilSexo"
                 android:layout_width="match_parent"
@@ -237,7 +237,7 @@
                     android:focusableInTouchMode="false" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- ===== DROPDOWN: TIPO DE CUERPO ===== -->
+            <!-- TIPO DE CUERPO -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilTipoCuerpo"
                 android:layout_width="match_parent"
@@ -292,7 +292,7 @@
                     android:fontFamily="sans-serif-bold" />
             </LinearLayout>
 
-            <!-- ===== DROPDOWN: NIVEL DE CONDICIÓN FÍSICA ===== -->
+            <!-- NIVEL DE CONDICION FISICA  -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilNivelCondicion"
                 android:layout_width="match_parent"
@@ -325,7 +325,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- ========== BOTÓN GUARDAR MEDIDAS (FIJO ABAJO) ========== -->
+    <!-- BOTON GUARDAR MEDIDAS (FIJO ABAJO) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

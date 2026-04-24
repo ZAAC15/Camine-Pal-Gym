@@ -8,7 +8,7 @@
     android:layout_marginBottom="10dp"
     android:padding="14dp">
 
-    <!-- Fila superior: icono + nombre + categoria -->
+    <!-- Fila superior icono, nombre y categoria -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
 
         </LinearLayout>
 
-        <!-- Etiqueta de categoría -->
+        <!-- Etiqueta de categoria -->
         <TextView
             android:id="@+id/tvCategoriaEjercicio"
             android:layout_width="wrap_content"

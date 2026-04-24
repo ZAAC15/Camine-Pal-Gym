@@ -21,7 +21,7 @@ class CrearPostActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_crear_post)
 
-        // BOTÓN VOLVER
+        // BOTON VOLVER
         val btnBack = findViewById<ImageButton>(R.id.btnBack)
         btnBack.setOnClickListener {
             finish()
@@ -58,7 +58,7 @@ class CrearPostActivity : AppCompatActivity() {
             boxImagen.visibility = View.VISIBLE
         }
 
-        // BOTÓN PUBLICAR (por ahora solo cierra)
+        // BOTON PUBLICAR
         btnPublicar.setOnClickListener {
             Toast.makeText(this, "Post creado", Toast.LENGTH_SHORT).show()
             finish()

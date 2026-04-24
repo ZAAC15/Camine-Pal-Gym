@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@color/FondoGris">
 
-    <!-- ========== HEADER: FLECHA ATRÁS + TÍTULO + LUPA ========== -->
+    <!-- ========== HEADER FLECHA ATRÁS TITULO Y LUPA ========== -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         android:paddingTop="24dp"
         android:paddingBottom="12dp">
 
-        <!-- ICONO: ic_arrow_back -->
+        <!-- ICONO flecha atras -->
         <ImageView
             android:id="@+id/ivBack"
             android:layout_width="24dp"
@@ -35,7 +35,7 @@
             android:textSize="18sp"
             android:fontFamily="sans-serif-bold" />
 
-        <!-- ICONO: ic_search (lupa) -->
+        <!-- ICONO lupa -->
         <ImageView
             android:id="@+id/ivBuscar"
             android:layout_width="24dp"
@@ -45,7 +45,7 @@
             android:contentDescription="@string/buscar" />
     </LinearLayout>
 
-    <!-- ========== SCROLL PRINCIPAL ========== -->
+    <!--  SCROLL PRINCIPAL -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -58,7 +58,7 @@
             android:paddingHorizontal="16dp"
             android:paddingBottom="24dp">
 
-            <!-- ===== CARD RESUMEN DEL DÍA ===== -->
+            <!--  CARD RESUMEN DEL DIA  -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardResumenDia"
                 android:layout_width="match_parent"
@@ -74,7 +74,7 @@
                     android:orientation="vertical"
                     android:padding="16dp">
 
-                    <!-- Fila: Nombre del día + icono trofeo -->
+                    <!-- Nombre del día -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -106,16 +106,13 @@
                                 android:layout_marginTop="2dp" />
                         </LinearLayout>
 
-                        <!--
-                            ICONO: Trofeo/copa — ic_emoji_events o ic_trophy
-                            Color amarillo #F5C518
-                        -->
+                        <!--ICONO: Trofeo o copa-->
                         <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             android:src="@drawable/ic_fire"
                             app:tint="#F5C518"
-                            android:contentDescription="Trofeo" />
+                            android:contentDescription="@string/trofeo" />
                     </LinearLayout>
 
                     <!-- Divisor -->
@@ -125,7 +122,7 @@
                         android:background="@color/GrisTexto"
                         android:layout_marginVertical="14dp" />
 
-                    <!-- Progreso label + contador -->
+                    <!-- Progreso label y contador -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -141,7 +138,7 @@
                             android:textColor="@color/GrisTexto"
                             android:textSize="13sp" />
 
-                        <!-- "3/6 ejercicios" — el número amarillo -->
+                        <!-- "3/6 ejercicios — el numero amarillo -->
                         <TextView
                             android:id="@+id/tvProgresoEjercicios"
                             android:layout_width="wrap_content"
@@ -163,14 +160,14 @@
                         android:progressDrawable="@drawable/bg_progress_bar"
                         android:layout_marginBottom="14dp" />
 
-                    <!-- Duración + calorías -->
+                    <!-- Duracion y calorias -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="center_vertical">
 
-                        <!-- ICONO: ic_access_time (reloj pequeño) -->
+                        <!-- ICONO reloj pequeño -->
                         <ImageView
                             android:layout_width="16dp"
                             android:layout_height="16dp"
@@ -188,7 +185,7 @@
                             android:textSize="13sp"
                             android:layout_marginEnd="16dp" />
 
-                        <!-- ICONO: ic_local_fire_department (llama/fuego naranja) -->
+                        <!-- ICONO llama -->
                         <ImageView
                             android:layout_width="16dp"
                             android:layout_height="16dp"
@@ -208,7 +205,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- - Ejercicio 1: Press plano (COMPLETADO) - -->
+            <!-- Press plano -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardEjercicio1"
                 android:layout_width="match_parent"
@@ -231,7 +228,7 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <!-- Nombre + badge en la misma fila -->
+                        <!-- Nombre badge en la misma fila -->
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -248,7 +245,7 @@
                                 android:fontFamily="sans-serif-medium"
                                 android:layout_marginEnd="8dp" />
 
-                            <!-- Badge "Chest" amarillo -->
+                            <!-- Badge marillo -->
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -269,8 +266,7 @@
                             android:textSize="13sp" />
                     </LinearLayout>
 
-                    <!-- Check completado: círculo amarillo con tick blanco -->
-                    <!-- ICONO: ic_check_circle (relleno amarillo) -->
+                    <!-- ICONO relleno amarillo -->
                     <ImageView
                         android:id="@+id/ivCheck1"
                         android:layout_width="30dp"
@@ -281,7 +277,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Ejercicio 2: Press inclinado con mancuernas (COMPLETADO) - -->
+            <!-- Press inclinado con mancuernas  -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardEjercicio2"
                 android:layout_width="match_parent"
@@ -350,7 +346,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!--  Ejercicio 3: Cable Flyes  -->
+            <!--  Cable Flyes -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardEjercicio3"
                 android:layout_width="match_parent"
@@ -419,7 +415,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Ejercicio 4: Tricep Pushdown (PENDIENTE)  -->
+            <!-- Tricep Pushdown -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardEjercicio4"
                 android:layout_width="match_parent"
@@ -458,7 +454,7 @@
                                 android:fontFamily="sans-serif-medium"
                                 android:layout_marginEnd="8dp" />
 
-                            <!-- Badge "Triceps" color diferente (también amarillo según imagen) -->
+                            <!-- Badge Triceps -->
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -479,8 +475,6 @@
                             android:textSize="13sp" />
                     </LinearLayout>
 
-                    <!-- Check PENDIENTE: círculo outline gris sin relleno -->
-                    <!-- ICONO: ic_radio_button_unchecked o circle outline -->
                     <ImageView
                         android:id="@+id/ivCheck4"
                         android:layout_width="30dp"
@@ -491,7 +485,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Ejercicio 5: Overhead Extension (PENDIENTE)  -->
+            <!-- Overhead Extension -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardEjercicio5"
                 android:layout_width="match_parent"

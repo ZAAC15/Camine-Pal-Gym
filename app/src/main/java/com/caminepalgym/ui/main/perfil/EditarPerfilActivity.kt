@@ -30,7 +30,6 @@ class EditarPerfilActivity : AppCompatActivity() {
     }
 
     private fun guardarCambios() {
-        // aquí va tu lógica para guardar
         finish()
     }
 }

@@ -44,7 +44,7 @@
 
         </LinearLayout>
 
-        <!-- Título preguntas -->
+        <!-- Titulo preguntas -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -209,7 +209,7 @@
             android:textStyle="bold"
             android:layout_marginBottom="12dp" />
 
-        <!-- Botón contactar soporte -->
+        <!-- Boton contactar soporte -->
         <Button
             android:id="@+id/btnContactarSoporte"
             android:layout_width="match_parent"
@@ -221,7 +221,7 @@
             android:layout_marginBottom="10dp"
             style="@style/Widget.AppCompat.Button.Borderless" />
 
-        <!-- Botón foro -->
+        <!-- Boton foro -->
         <Button
             android:id="@+id/btnForo"
             android:layout_width="match_parent"

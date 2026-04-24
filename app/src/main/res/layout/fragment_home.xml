@@ -12,7 +12,7 @@
         android:orientation="vertical"
         android:paddingBottom="100dp">
 
-        <!-- ========== HEADER ========== -->
+        <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,8 +32,7 @@
                 android:textSize="14sp"
                 android:fontFamily="sans-serif-medium" />
 
-            <!-- Avatar / Iniciales del usuario -->
-            <!-- IMAGEN: Círculo con iniciales "US" - usa un ImageView o TextView circular -->
+            <!-- Avatar Iniciales del usuario -->
             <TextView
                 android:id="@+id/tvUserAvatar"
                 android:layout_width="36dp"
@@ -47,7 +46,6 @@
                 android:layout_marginEnd="12dp" />
 
             <!-- Icono campana de notificaciones -->
-            <!-- ICONO: ic_notifications_outline o similar de Material Icons -->
             <ImageView
                 android:id="@+id/ivNotificaciones"
                 android:layout_width="28dp"
@@ -84,7 +82,7 @@
                 android:layout_marginTop="2dp" />
         </LinearLayout>
 
-        <!-- ========== CARD PLAN DE HOY ========== -->
+        <!--  CARD PLAN DE HOY -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardPlanHoy"
             android:layout_width="match_parent"
@@ -218,7 +216,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- ========== CARD ESTADO CORPORAL ========== -->
+        <!-- CARD ESTADO CORPORAL  -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardEstadoCorporal"
             android:layout_width="match_parent"
@@ -308,7 +306,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- ========== CARD MÉTRICAS CLAVE ========== -->
+        <!--  CARD MÉTRICAS CLAVE  -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardMetricas"
             android:layout_width="match_parent"
@@ -452,14 +450,14 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- ========== CARD ESTA SEMANA ========== -->
+        <!--  CARD ESTA SEMANA  -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardEstaSemana"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="24dp"
-            app:cardBackgroundColor="#1E1E1E"
+            app:cardBackgroundColor="@color/FondoGris"
             app:cardCornerRadius="16dp"
             app:cardElevation="0dp">
 
@@ -469,7 +467,7 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <!-- Header semana + streak -->
+                <!-- Header semana streak -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -481,7 +479,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Esta semana"
+                        android:text="@string/esta_semana"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:fontFamily="sans-serif-bold" />
@@ -491,27 +489,27 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:src="@drawable/ic_fire"
-                        app:tint="#FF6D00"
-                        android:contentDescription="Racha"
+                        app:tint="@color/Naranja"
+                        android:contentDescription="@string/racha"
                         android:layout_marginEnd="4dp" />
 
                     <TextView
                         android:id="@+id/tvStreak"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="5 day streak"
-                        android:textColor="#FF6D00"
+                        android:text="@string/_5_day_streak"
+                        android:textColor="@color/Naranja"
                         android:textSize="13sp"
                         android:fontFamily="sans-serif-medium" />
                 </LinearLayout>
 
-                <!-- Días de la semana -->
+                <!-- Dias de la semana -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <!-- L - Completado -->
+                    <!-- Completado -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -526,13 +524,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="L"
+                            android:text="@string/l"
                             android:textColor="@color/white"
                             android:textSize="11sp"
                             android:layout_marginTop="6dp" />
                     </LinearLayout>
 
-                    <!-- M - Completado -->
+                    <!--Completado -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -547,13 +545,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="M"
+                            android:text="@string/m"
                             android:textColor="@color/white"
                             android:textSize="11sp"
                             android:layout_marginTop="6dp" />
                     </LinearLayout>
 
-                    <!-- M - Completado -->
+                    <!-- Completado -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -568,13 +566,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="M"
+                            android:text="@string/m"
                             android:textColor="@color/white"
                             android:textSize="11sp"
                             android:layout_marginTop="6dp" />
                     </LinearLayout>
 
-                    <!-- J - Completado -->
+                    <!-- Completado -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -589,13 +587,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="J"
+                            android:text="@string/j"
                             android:textColor="@color/white"
                             android:textSize="11sp"
                             android:layout_marginTop="6dp" />
                     </LinearLayout>
 
-                    <!-- V - Completado -->
+                    <!--Completado -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -610,13 +608,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="V"
+                            android:text="@string/v"
                             android:textColor="@color/white"
                             android:textSize="11sp"
                             android:layout_marginTop="6dp" />
                     </LinearLayout>
 
-                    <!-- S - Pendiente -->
+                    <!--Pendiente -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -631,13 +629,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="S"
+                            android:text="@string/s"
                             android:textColor="#888888"
                             android:textSize="11sp"
                             android:layout_marginTop="6dp" />
                     </LinearLayout>
 
-                    <!-- D - Pendiente -->
+                    <!-- Pendiente -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -652,7 +650,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="D"
+                            android:text="@string/d"
                             android:textColor="@color/GrisTexto"
                             android:textSize="11sp"
                             android:layout_marginTop="6dp" />

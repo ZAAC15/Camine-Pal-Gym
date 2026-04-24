@@ -27,27 +27,21 @@ class PrivacidadActivity : AppCompatActivity() {
         val switchUbicacion = findViewById<Switch>(R.id.switchUbicacion)
 
         switchPerfilPublico.setOnCheckedChangeListener { _, isChecked ->
-            // guardar preferencia perfil público
         }
 
         switchActividadAmigos.setOnCheckedChangeListener { _, isChecked ->
-            // guardar preferencia actividad amigos
         }
 
         switchDatosAnalisis.setOnCheckedChangeListener { _, isChecked ->
-            // guardar preferencia datos análisis
         }
 
         switchUbicacion.setOnCheckedChangeListener { _, isChecked ->
-            // guardar preferencia ubicación
         }
 
         findViewById<Button>(R.id.btnDescargarDatos).setOnClickListener {
-            // lógica para descargar datos
         }
 
         findViewById<Button>(R.id.btnBorrarCuenta).setOnClickListener {
-            // lógica para borrar cuenta
         }
     }
 }

@@ -22,7 +22,7 @@
             android:src="@drawable/logocontainer"
             android:scaleType="fitCenter" />
 
-        <!-- Título -->
+        <!-- Titulo -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
             android:gravity="center"
             android:lineSpacingMultiplier="1.2" />
 
-        <!-- Subtítulo -->
+        <!-- Subtitulo -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,9 +44,8 @@
             android:textSize="14sp"
             android:gravity="center" />
 
-        <!-- Campo Correo -->
 
-        <!-- Botón Enviar -->
+        <!-- Boton Enviar -->
         <EditText
             android:id="@+id/etCorreo"
             android:layout_width="match_parent"

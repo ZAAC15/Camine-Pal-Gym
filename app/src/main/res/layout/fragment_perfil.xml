@@ -20,7 +20,7 @@
             android:background="@color/ColorPrincipal">
         </LinearLayout>
 
-        <!-- Avatar centrado (superpuesto visualmente con margin negativo) -->
+        <!-- Avatar centrado -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
                 <TextView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:text="BJ"
+                    android:text="@string/bj"
                     android:textColor="@color/white"
                     android:textSize="26sp"
                     android:textStyle="bold"
@@ -58,7 +58,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Brayan Juanito"
+                android:text="@string/brayan_juanito"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -66,12 +66,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Miembro desde enero de 2024"
+                android:text="@string/miembro_desde_enero_de_2024"
                 android:textColor="@color/GrisTexto"
                 android:textSize="13sp"
                 android:layout_marginTop="4dp" />
 
-            <!-- Badge Membresía Pro -->
+            <!-- Badge Membresia Pro -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Membresía · Pro"
+                    android:text="@string/membres_a_pro"
                     android:textColor="@color/ColorPrincipal"
                     android:textSize="13sp"
                     android:textStyle="bold" />
@@ -103,7 +103,7 @@
                 android:id="@+id/btnEditarPerfil"
                 android:layout_width="180dp"
                 android:layout_height="44dp"
-                android:text="Editar Perfil"
+                android:text="@string/editar_perfil"
                 android:textColor="@color/ColorPrincipal"
                 android:textSize="14sp"
                 android:backgroundTint="@color/background"
@@ -112,7 +112,7 @@
 
         </LinearLayout>
 
-        <!-- Estadísticas -->
+        <!-- Estadisticas -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -133,7 +133,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="505"
+                    android:text="@string/_505"
                     android:textColor="@color/ColorPrincipal"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -141,14 +141,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="+12"
+                    android:text="@string/_12"
                     android:textColor="@color/ColorVerde"
                     android:textSize="11sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Entrenamientos"
+                    android:text="@string/entrenamientos"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp" />
 
@@ -172,7 +172,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="23"
+                    android:text="@string/_23"
                     android:textColor="@color/ColorPrincipal"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -180,14 +180,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="+1"
+                    android:text="@string/_1__"
                     android:textColor="@color/ColorVerde"
                     android:textSize="11sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Racha de días"
+                    android:text="@string/racha_de_d_as"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp" />
 
@@ -211,7 +211,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Intermedio"
+                    android:text="@string/intermedio"
                     android:textColor="@color/ColorPrincipal"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -219,14 +219,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Estable"
+                    android:text="@string/estable"
                     android:textColor="@color/GrisTexto"
                     android:textSize="11sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nivel"
+                    android:text="@string/nivel"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp" />
 
@@ -234,11 +234,11 @@
 
         </LinearLayout>
 
-        <!-- Sección Logros -->
+        <!-- Seccion Logros -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Logros"
+            android:text="@string/logros"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -271,7 +271,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Primer entrenamiento"
+                    android:text="@string/primer_entrenamiento"
                     android:textColor="@color/GrisTexto"
                     android:textSize="10sp"
                     android:gravity="center"
@@ -297,7 +297,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Racha de 30 días"
+                    android:text="@string/racha_de_30_d_as"
                     android:textColor="@color/GrisTexto"
                     android:textSize="10sp"
                     android:gravity="center"
@@ -323,7 +323,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Press de banca 100 kg"
+                    android:text="@string/press_de_banca_100_kg"
                     android:textColor="@color/GrisTexto"
                     android:textSize="10sp"
                     android:gravity="center"
@@ -349,7 +349,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1 año como miembro"
+                    android:text="@string/_1_a_o_como_miembro"
                     android:textColor="@color/GrisTexto"
                     android:textSize="10sp"
                     android:gravity="center"
@@ -375,7 +375,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="500 entrenamientos"
+                    android:text="@string/_500_entrenamientos"
                     android:textColor="@color/GrisTexto"
                     android:textSize="10sp"
                     android:gravity="center"
@@ -385,11 +385,11 @@
 
         </LinearLayout>
 
-        <!-- Sección Ajustes -->
+        <!-- Seccin Ajustes -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ajustes"
+            android:text="@string/ajustes"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -415,7 +415,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Panel Administrativo"
+                android:text="@string/panel_administrativo"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
 
@@ -425,7 +425,7 @@
                 android:src="@android:drawable/ic_media_next" />
 
         </LinearLayout>
-        <!-- Item: Notificaciones -->
+        <!-- Notificaciones -->
         <LinearLayout
             android:id="@+id/itemNotificaciones"
             android:layout_width="match_parent"
@@ -445,7 +445,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Notificaciones"
+                android:text="@string/notificaciones"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
 
@@ -456,7 +456,7 @@
 
         </LinearLayout>
 
-        <!-- Item: Privacidad -->
+        <!-- Privacidad -->
         <LinearLayout
             android:id="@+id/itemPrivacidad"
             android:layout_width="match_parent"
@@ -476,7 +476,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Privacidad"
+                android:text="@string/privacidad"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
 
@@ -487,7 +487,7 @@
 
         </LinearLayout>
 
-        <!-- Item: Tema -->
+        <!--Tema -->
         <LinearLayout
             android:id="@+id/itemTema"
             android:layout_width="match_parent"
@@ -507,7 +507,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Tema"
+                android:text="@string/tema"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
 
@@ -518,7 +518,7 @@
 
         </LinearLayout>
 
-        <!-- Item: Suscripción -->
+        <!-- Suscripcion -->
         <LinearLayout
             android:id="@+id/itemSuscripcion"
             android:layout_width="match_parent"
@@ -538,7 +538,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Suscripción"
+                android:text="@string/suscripci_n"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
 
@@ -549,7 +549,7 @@
 
         </LinearLayout>
 
-        <!-- Item: Ayuda y soporte -->
+        <!-- Ayuda y soporte -->
         <LinearLayout
             android:id="@+id/itemAyuda"
             android:layout_width="match_parent"
@@ -569,7 +569,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Ayuda y soporte"
+                android:text="@string/ayuda_y_soporte"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
 
@@ -580,7 +580,7 @@
 
         </LinearLayout>
 
-        <!-- Item: Cerrar sesión -->
+        <!-- Cerrar sesion -->
         <LinearLayout
             android:id="@+id/itemCerrarSesion"
             android:layout_width="match_parent"
@@ -600,7 +600,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Cerrar sesión"
+                android:text="@string/cerrar_sesi_n"
                 android:textColor="@color/ColorRojo"
                 android:textSize="15sp" />
 

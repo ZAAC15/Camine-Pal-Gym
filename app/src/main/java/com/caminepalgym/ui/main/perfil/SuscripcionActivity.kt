@@ -22,11 +22,9 @@ class SuscripcionActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnSuscribirAnual).setOnClickListener {
-            // lógica para suscribirse al plan anual
         }
 
         findViewById<TextView>(R.id.tvCancelarSuscripcion).setOnClickListener {
-            // lógica para cancelar suscripción
         }
     }
 }

@@ -6,16 +6,16 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.caminepalgym.R
-// ── Modelo de datos ──────────────────────────────────────────────
+// Modelo de datos
 data class Ejercicio(
     val nombre: String,
     val series: Int,
     val repeticiones: Int,
-    val peso: String,        // p.ej. "80kg" o "peso corporal"
-    val categoria: String    // "Empuje", "Jalón", "Pierna", "Abdomen"
+    val peso: String,
+    val categoria: String
 )
 
-// ── Adaptador ────────────────────────────────────────────────────
+// Adaptador
 class EntrenamientoAdapter(
     private var lista: List<Ejercicio>
 ) : RecyclerView.Adapter<EntrenamientoAdapter.VH>() {
@@ -41,7 +41,6 @@ class EntrenamientoAdapter(
 
     override fun getItemCount() = lista.size
 
-    /** Actualiza la lista (usado al filtrar por categoría) */
     fun actualizarLista(nuevaLista: List<Ejercicio>) {
         lista = nuevaLista
         notifyDataSetChanged()

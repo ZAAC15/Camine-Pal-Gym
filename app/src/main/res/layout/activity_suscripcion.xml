@@ -53,7 +53,7 @@
             android:padding="16dp"
             android:layout_marginBottom="16dp">
 
-            <!-- Título + Badge ACTIVO -->
+            <!-- Titulo + Badge ACTIVO -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -116,7 +116,7 @@
                 android:textSize="12sp"
                 android:layout_marginBottom="12dp" />
 
-            <!-- Características -->
+            <!-- Caracteristicas -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -268,7 +268,7 @@
             android:padding="16dp"
             android:layout_marginBottom="16dp">
 
-            <!-- Título + Badge AHORRA -->
+            <!-- Titulo + Badge AHORRA -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -510,7 +510,7 @@
 
         </LinearLayout>
 
-        <!-- Cancelar suscripción -->
+        <!-- Cancelar suscripcion -->
         <TextView
             android:id="@+id/tvCancelarSuscripcion"
             android:layout_width="match_parent"

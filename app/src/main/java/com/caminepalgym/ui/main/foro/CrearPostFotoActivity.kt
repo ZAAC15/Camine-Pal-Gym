@@ -15,30 +15,28 @@ class CrearPostFotoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crear_post)
 
-        // 🔙 Botón volver
+        // Boton volver
         val btnBack = findViewById<ImageButton>(R.id.btnBack)
         btnBack.setOnClickListener {
             finish()
         }
 
-        // 📷 TAB FOTO → abrir otro activity
+        // TAB FOTO abrir otro activity
         val tabFoto = findViewById<TextView>(R.id.tabFoto)
         tabFoto.setOnClickListener {
             val intent = Intent(this, CrearPostFotoActivity::class.java)
             startActivity(intent)
-            finish() // opcional
+            finish()
         }
 
-        // 📝 TAB TEXTO (opcional si quieres que haga algo)
+        // TAB TEXTO
         val tabTexto = findViewById<TextView>(R.id.tabTexto)
         tabTexto.setOnClickListener {
-            // Ya estás en esta pantalla
         }
 
-        // 🚀 BOTÓN PUBLICAR (solo visual por ahora)
+        // BOTON PUBLICAR
         val btnPublicar = findViewById<android.widget.Button>(R.id.btnPublicar)
         btnPublicar.setOnClickListener {
-            // Aquí luego guardas el post
         }
     }
 }

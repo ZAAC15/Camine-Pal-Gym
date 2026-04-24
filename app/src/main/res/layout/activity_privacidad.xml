@@ -32,7 +32,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Privacidad"
+                android:text="@string/privacidad"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -44,11 +44,11 @@
 
         </LinearLayout>
 
-        <!-- Sección Visibilidad -->
+        <!-- Seccion Visibilidad -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Visibilidad"
+            android:text="@string/visibilidad"
             android:textColor="@color/GrisTexto"
             android:textSize="13sp"
             android:textStyle="bold"
@@ -73,7 +73,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Perfil público"
+                    android:text="@string/perfil_p_blico"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -81,7 +81,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cualquiera puede ver tu perfil y estadísticas"
+                    android:text="@string/cualquiera_puede_ver_tu_perfil_y_estad_sticas"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp"
                     android:layout_marginTop="2dp" />
@@ -98,7 +98,7 @@
 
         </LinearLayout>
 
-        <!-- Item: Mostrar actividad a amigos -->
+        <!-- Mostrar actividad a amigos -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -117,7 +117,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mostrar actividad a amigos"
+                    android:text="@string/mostrar_actividad_a_amigos"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -125,7 +125,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tus amigos pueden ver tu actividad de entrenamiento"
+                    android:text="@string/tus_amigos_pueden_ver_tu_actividad_de_entrenamiento"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp"
                     android:layout_marginTop="2dp" />
@@ -142,17 +142,17 @@
 
         </LinearLayout>
 
-        <!-- Sección Datos -->
+        <!-- Seccion Datos -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Datos"
+            android:text="@string/datos"
             android:textColor="@color/GrisTexto"
             android:textSize="13sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
 
-        <!-- Item: Compartir datos para análisis -->
+        <!-- Compartir datos para analisis -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -171,7 +171,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Compartir datos para análisis"
+                    android:text="@string/compartir_datos_para_an_lisis"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -179,7 +179,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ayuda a mejorar la app con datos anónimos"
+                    android:text="@string/ayuda_a_mejorar_la_app_con_datos_an_nimos"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp"
                     android:layout_marginTop="2dp" />
@@ -196,7 +196,7 @@
 
         </LinearLayout>
 
-        <!-- Item: Acceso a ubicación -->
+        <!-- Item: Acceso a ubicacion -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -215,7 +215,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Acceso a ubicación"
+                    android:text="@string/acceso_a_ubicaci_n"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -240,34 +240,34 @@
 
         </LinearLayout>
 
-        <!-- Sección Cuenta -->
+        <!-- Seccion Cuenta -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cuenta"
+            android:text="@string/cuenta"
             android:textColor="@color/GrisTexto"
             android:textSize="13sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
 
-        <!-- Botón descargar datos -->
+        <!-- Boton descargar datos -->
         <Button
             android:id="@+id/btnDescargarDatos"
             android:layout_width="match_parent"
             android:layout_height="52dp"
-            android:text="Descargar mis datos"
+            android:text="@string/descargar_mis_datos"
             android:backgroundTint="@color/background"
             android:textColor="@color/ColorPrincipal"
             android:textStyle="bold"
             android:layout_marginBottom="10dp"
             style="@style/Widget.AppCompat.Button.Borderless" />
 
-        <!-- Botón borrar cuenta -->
+        <!-- Boton borrar cuenta -->
         <Button
             android:id="@+id/btnBorrarCuenta"
             android:layout_width="match_parent"
             android:layout_height="52dp"
-            android:text="Borrar cuenta"
+            android:text="@string/borrar_cuenta"
             android:backgroundTint="@color/background"
             android:textColor="@color/ColorRojo"
             android:textStyle="bold"

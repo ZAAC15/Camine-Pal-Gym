@@ -38,7 +38,6 @@ class EntrenamientoFragment : Fragment() {
 
     private lateinit var adapter: EntrenamientoAdapter
 
-    // ─────────────────────────────────────────────────────────────
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -49,7 +48,7 @@ class EntrenamientoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // RecyclerView + adaptador
+        // RecyclerView y adaptador
         recyclerEntrenamientos = view.findViewById(R.id.recyclerEntrenamientos)
         recyclerEntrenamientos.layoutManager = LinearLayoutManager(requireContext())
         adapter = EntrenamientoAdapter(listaCompleta)
@@ -58,7 +57,6 @@ class EntrenamientoFragment : Fragment() {
         // FAB
         fabAgregar = view.findViewById(R.id.fabAgregar)
         fabAgregar.setOnClickListener {
-            // aquí abres el dialog o activity para agregar entrenamiento
         }
 
         // Chips / filtros
@@ -74,11 +72,11 @@ class EntrenamientoFragment : Fragment() {
         chipPierna.setOnClickListener  { seleccionarChip("Pierna") }
         chipAbdomen.setOnClickListener { seleccionarChip("Abdomen") }
 
-        // Seleccionar "Todos" por defecto
+
         seleccionarChip("Todos")
     }
 
-    // ── Lógica de chips ──────────────────────────────────────────
+    // Logica de chips
     private fun seleccionarChip(categoria: String) {
         val chips      = listOf(chipTodos, chipEmpuje, chipJalon, chipPierna, chipAbdomen)
         val categorias = listOf("Todos", "Empuje", "Jalón", "Pierna", "Abdomen")

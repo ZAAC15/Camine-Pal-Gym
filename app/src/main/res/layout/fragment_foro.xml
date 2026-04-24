@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/FondoGris">
 
-    <!-- Título -->
+    <!-- Titulo -->
     <TextView
         android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <!-- Icono búsqueda -->
+    <!-- Icono busqueda -->
     <ImageView
         android:id="@+id/ivBuscar"
         android:layout_width="24dp"
@@ -105,7 +105,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Botón flotante -->
+    <!-- Boton flotante -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAgregar"
         android:layout_width="wrap_content"

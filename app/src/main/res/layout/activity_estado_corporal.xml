@@ -101,7 +101,7 @@
 
             </LinearLayout>
 
-            <!-- Círculo porcentaje -->
+            <!-- Circulo porcentaje -->
             <TextView
                 android:id="@+id/tvScoreCirculo"
                 android:layout_width="56dp"
@@ -115,7 +115,7 @@
 
         </LinearLayout>
 
-        <!-- Masa corporal + Definición -->
+        <!-- Masa corporal + Definicion -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -231,7 +231,7 @@
 
             </LinearLayout>
 
-            <!-- Definición -->
+            <!-- Definicion -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -255,7 +255,7 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical">
 
-                    <!-- Círculo 72% -->
+                    <!-- Circulo 72% -->
                     <TextView
                         android:id="@+id/tvDefinicionCirculo"
                         android:layout_width="52dp"
@@ -296,14 +296,14 @@
 
         </LinearLayout>
 
-        <!-- Simetría + Volumen -->
+        <!-- Simetria + Volumen -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginBottom="12dp">
 
-            <!-- Simetría -->
+            <!-- Simetria -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -378,7 +378,7 @@
                     android:textStyle="bold"
                     android:layout_marginBottom="6dp" />
 
-                <!-- Mini gráfica simplificada -->
+                <!-- Mini grafica simplificada -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp"

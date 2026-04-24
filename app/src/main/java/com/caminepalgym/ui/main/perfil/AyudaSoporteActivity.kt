@@ -22,14 +22,11 @@ class AyudaSoporteActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnContactarSoporte).setOnClickListener {
-            // lógica para contactar soporte
         }
 
         findViewById<Button>(R.id.btnForo).setOnClickListener {
-            // lógica para ir al foro
         }
 
-        // FAQs expandibles
         setupFaq(R.id.faq1)
         setupFaq(R.id.faq2)
         setupFaq(R.id.faq3)
@@ -39,9 +36,7 @@ class AyudaSoporteActivity : AppCompatActivity() {
 
     private fun setupFaq(faqId: Int) {
         val faq = findViewById<LinearLayout>(faqId)
-        // El faq1 tiene una respuesta visible por defecto, los demás se pueden expandir
         faq.setOnClickListener {
-            // aquí puedes agregar lógica de expandir/colapsar
         }
     }
 }

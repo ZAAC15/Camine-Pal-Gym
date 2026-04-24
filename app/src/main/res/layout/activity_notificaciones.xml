@@ -32,7 +32,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Notificaciones"
+                android:text="@string/notificaciones"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -44,17 +44,17 @@
 
         </LinearLayout>
 
-        <!-- Sección Training -->
+        <!-- Seccion Training -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Training"
+            android:text="@string/training"
             android:textColor="@color/GrisTexto"
             android:textSize="13sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
 
-        <!-- Item: Recordatorios -->
+        <!-- Recordatorios -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Recordatorios de entrenamiento"
+                    android:text="@string/recordatorios_de_entrenamiento"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -81,7 +81,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Recordatorios diarios para completar tu entrenamiento"
+                    android:text="@string/recordatorios_diarios_para_completar_tu_entrenamiento"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp"
                     android:layout_marginTop="2dp" />
@@ -98,7 +98,7 @@
 
         </LinearLayout>
 
-        <!-- Item: Informe semanal -->
+        <!-- Informe semanal -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -117,7 +117,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Informe de progreso semanal"
+                    android:text="@string/informe_de_progreso_semanal"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -125,7 +125,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Resumen de tu semana cada domingo"
+                    android:text="@string/resumen_de_tu_semana_cada_domingo"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp"
                     android:layout_marginTop="2dp" />
@@ -142,7 +142,7 @@
 
         </LinearLayout>
 
-        <!-- Item: Alertas de logros -->
+        <!--Alertas de logros -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -161,7 +161,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Alertas de logros"
+                    android:text="@string/alertas_de_logros"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -169,7 +169,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Recibir notificaciones cuando obtengas hitos"
+                    android:text="@string/recibir_notificaciones_cuando_obtengas_hitos"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp"
                     android:layout_marginTop="2dp" />
@@ -186,17 +186,17 @@
 
         </LinearLayout>
 
-        <!-- Sección Comunidad -->
+        <!-- Seccion Comunidad -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Comunidad"
+            android:text="@string/comunidad"
             android:textColor="@color/GrisTexto"
             android:textSize="13sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
 
-        <!-- Item: Actividad comunitaria -->
+        <!-- Actividad comunitaria -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -215,7 +215,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Actividad comunitaria"
+                    android:text="@string/actividad_comunitaria"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -223,7 +223,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Me gusta, comentarios y menciones"
+                    android:text="@string/me_gusta_comentarios_y_menciones"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp"
                     android:layout_marginTop="2dp" />
@@ -240,17 +240,17 @@
 
         </LinearLayout>
 
-        <!-- Sección Canales -->
+        <!-- Seccion Canales -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Canales"
+            android:text="@string/canales"
             android:textColor="@color/GrisTexto"
             android:textSize="13sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
 
-        <!-- Item: Notificaciones push -->
+        <!-- Notificaciones push -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -269,7 +269,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Notificaciones push"
+                    android:text="@string/notificaciones_push"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -277,7 +277,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Recibe alertas en tu dispositivo"
+                    android:text="@string/recibe_alertas_en_tu_dispositivo"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp"
                     android:layout_marginTop="2dp" />
@@ -294,7 +294,7 @@
 
         </LinearLayout>
 
-        <!-- Item: Notificaciones email -->
+        <!-- Notificaciones email -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -312,7 +312,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Notificaciones por correo electrónico"
+                    android:text="@string/notificaciones_por_correo_electr_nico"
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -320,7 +320,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Actualizaciones enviadas a alex@email.com"
+                    android:text="@string/actualizaciones_enviadas_a_alex_email_com"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp"
                     android:layout_marginTop="2dp" />

@@ -91,7 +91,7 @@
 
         </LinearLayout>
 
-        <!-- Sección Información personal -->
+        <!-- Seccion Informacion personal -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -197,7 +197,7 @@
 
         </LinearLayout>
 
-        <!-- Biografía -->
+        <!-- Biografia -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -329,7 +329,7 @@
 
         </LinearLayout>
 
-        <!-- Sección Perfil Fitness -->
+        <!-- Seccion Perfil Fitness -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -434,7 +434,7 @@
 
         </LinearLayout>
 
-        <!-- Sección Redes sociales -->
+        <!-- Seccion Redes sociales -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -504,7 +504,7 @@
 
         </LinearLayout>
 
-        <!-- Botón Guardar -->
+        <!-- Boton Guardar -->
         <Button
             android:id="@+id/btnGuardarCambios"
             android:layout_width="match_parent"

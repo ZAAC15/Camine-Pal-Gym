@@ -60,7 +60,7 @@
                 android:layout_weight="1"
                 android:text="@string/texto"
                 android:gravity="center"
-                android:textColor="#000"
+                android:textColor="@color/black"
                 android:background="@drawable/bg_chip_selected"
                 android:padding="8dp"/>
 

@@ -28,27 +28,21 @@ class NotificacionesActivity : AppCompatActivity() {
         val switchEmail = findViewById<Switch>(R.id.switchEmail)
 
         switchRecordatorios.setOnCheckedChangeListener { _, isChecked ->
-            // guardar preferencia recordatorios
         }
 
         switchInforme.setOnCheckedChangeListener { _, isChecked ->
-            // guardar preferencia informe
         }
 
         switchLogros.setOnCheckedChangeListener { _, isChecked ->
-            // guardar preferencia logros
         }
 
         switchComunidad.setOnCheckedChangeListener { _, isChecked ->
-            // guardar preferencia comunidad
         }
 
         switchPush.setOnCheckedChangeListener { _, isChecked ->
-            // guardar preferencia push
         }
 
         switchEmail.setOnCheckedChangeListener { _, isChecked ->
-            // guardar preferencia email
         }
     }
 }

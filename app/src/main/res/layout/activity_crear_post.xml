@@ -42,6 +42,7 @@
                 android:text="@string/post"
                 android:backgroundTint="@color/ColorPrincipal"
                 android:textColor="@color/black"/>
+
         </LinearLayout>
 
         <!-- TABS -->
@@ -73,6 +74,7 @@
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:padding="8dp"/>
+
         </LinearLayout>
 
         <!-- USUARIO -->
@@ -84,10 +86,11 @@
             android:layout_marginTop="16dp">
 
             <TextView
+                android:id="@+id/tvAvatarCrear"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/bg_avatar"
-                android:text="@string/jd"
+                android:text="U"
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:textStyle="bold"/>
@@ -99,23 +102,27 @@
                 android:layout_marginStart="10dp">
 
                 <TextView
+                    android:id="@+id/tvNombreUsuario"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/brayan_juanito"
+                    android:text="Cargando..."
                     android:textColor="@color/white"
                     android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/usuario"
+                    android:text="usuario"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp"/>
+
             </LinearLayout>
+
         </LinearLayout>
 
         <!-- INPUT TITULO -->
         <EditText
+            android:id="@+id/inputTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/a_adir_un_t_tulo_opcional"
@@ -141,59 +148,60 @@
         <LinearLayout
             android:id="@+id/boxImagen"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/bg_chip"
             android:layout_marginTop="12dp"
-            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="12dp"
             android:visibility="gone">
 
+            <!-- Preview de la imagen seleccionada -->
+            <ImageView
+                android:id="@+id/imgPreview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"/>
+
+            <!-- Botón seleccionar -->
+            <Button
+                android:id="@+id/btnSeleccionarFoto"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Seleccionar imagen del celular"
+                android:backgroundTint="@color/background"
+                android:textColor="@color/ColorPrincipal"
+                android:textStyle="bold"/>
+
+            <!-- Indicador de subida -->
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/tvSubiendo"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/click_para_agregar_una_imagen"
-                android:textColor="@color/GrisTexto"/>
+                android:text="Subiendo imagen... ⏳"
+                android:textColor="@color/ColorPrincipal"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"/>
+
         </LinearLayout>
 
-        <!-- ETIQUETAS -->
+        <!-- ETIQUETA -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/etiquetas"
             android:textColor="@color/white"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="6dp"/>
 
-        <LinearLayout
+        <Spinner
+            android:id="@+id/spinnerEtiqueta"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="8dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Entrenamiento"
-                android:background="@drawable/bg_chip"
-                android:textColor="@color/white"
-                android:padding="8dp"
-                android:layout_marginEnd="8dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/nutrici_n"
-                android:background="@drawable/bg_chip"
-                android:textColor="@color/white"
-                android:padding="8dp"
-                android:layout_marginEnd="8dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/progreso"
-                android:background="@drawable/bg_chip"
-                android:textColor="@color/white"
-                android:padding="8dp"/>
-        </LinearLayout>
+            android:layout_height="48dp"
+            android:background="@drawable/bg_chip"
+            android:paddingStart="12dp"/>
 
     </LinearLayout>
 

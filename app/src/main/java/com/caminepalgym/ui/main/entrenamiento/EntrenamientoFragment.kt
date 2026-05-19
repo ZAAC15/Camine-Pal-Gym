@@ -1,20 +1,26 @@
 package com.caminepalgym.ui.main.entrenamiento
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.caminepalgym.R
+import com.caminepalgym.data.RutinaRepository
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+import kotlinx.coroutines.launch
 
 class EntrenamientoFragment : Fragment() {
 
     private lateinit var recyclerEntrenamientos: RecyclerView
     private lateinit var fabAgregar: ExtendedFloatingActionButton
+    private lateinit var adapter: EntrenamientoAdapter
 
     private lateinit var chipTodos: Button
     private lateinit var chipEmpuje: Button
@@ -22,21 +28,7 @@ class EntrenamientoFragment : Fragment() {
     private lateinit var chipPierna: Button
     private lateinit var chipAbdomen: Button
 
-    // ── Lista completa de ejercicios (datos de ejemplo) ──────────
-    private val listaCompleta = listOf(
-        Ejercicio("Press de banca",  4, 10, "80kg",          "Empuje"),
-        Ejercicio("Sentadillas",     4, 10, "120kg",         "Pierna"),
-        Ejercicio("Peso muerto",     6,  6, "140kg",         "Jalón"),
-        Ejercicio("Dominadas",       4, 12, "peso corporal", "Jalón"),
-        Ejercicio("Press militar",   3, 10, "40kg",          "Empuje"),
-        Ejercicio("Curl de bíceps",  3, 12, "15kg",          "Jalón"),
-        Ejercicio("Extensión tricep",3, 12, "20kg",          "Empuje"),
-        Ejercicio("Zancadas",        3, 10, "60kg",          "Pierna"),
-        Ejercicio("Plancha",         4,  1, "60 seg",        "Abdomen"),
-        Ejercicio("Crunch",          3, 20, "peso corporal", "Abdomen")
-    )
-
-    private lateinit var adapter: EntrenamientoAdapter
+    private var listaCompleta = listOf<Ejercicio>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,18 +40,33 @@ class EntrenamientoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // RecyclerView y adaptador
         recyclerEntrenamientos = view.findViewById(R.id.recyclerEntrenamientos)
         recyclerEntrenamientos.layoutManager = LinearLayoutManager(requireContext())
-        adapter = EntrenamientoAdapter(listaCompleta)
+
+        adapter = EntrenamientoAdapter(
+            lista = emptyList(),
+            onCompletar = { ejercicio ->
+            // Callback cuando se marca como completado
+            lifecycleScope.launch {
+                try {
+                    RutinaRepository.marcarCompletado(ejercicio.id)
+                    cargarRutina()
+                    Toast.makeText(requireContext(), "¡Ejercicio completado! 🔥", Toast.LENGTH_SHORT).show()
+                } catch (e: Exception) {
+                    Toast.makeText(requireContext(), "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+        )
         recyclerEntrenamientos.adapter = adapter
 
         // FAB
         fabAgregar = view.findViewById(R.id.fabAgregar)
         fabAgregar.setOnClickListener {
+            startActivity(Intent(requireContext(), AgregarEjercicioActivity::class.java))
         }
 
-        // Chips / filtros
+        // Chips
         chipTodos   = view.findViewById(R.id.chipTodos)
         chipEmpuje  = view.findViewById(R.id.chipEmpuje)
         chipJalon   = view.findViewById(R.id.chipJalon)
@@ -72,11 +79,67 @@ class EntrenamientoFragment : Fragment() {
         chipPierna.setOnClickListener  { seleccionarChip("Pierna") }
         chipAbdomen.setOnClickListener { seleccionarChip("Abdomen") }
 
-
         seleccionarChip("Todos")
+        cargarRutina()
     }
 
-    // Logica de chips
+    override fun onResume() {
+        super.onResume()
+        cargarRutina()
+    }
+    private var rutinaGenerada = false
+
+    private fun cargarRutina() {
+        if (rutinaGenerada) {
+            // Solo recargar sin generar
+            lifecycleScope.launch {
+                val rutina = RutinaRepository.obtenerRutinaHoy()
+                listaCompleta = rutina.map {
+                    Ejercicio(
+                        id = it.id,
+                        nombre = it.nombre,
+                        series = it.series,
+                        repeticiones = it.repeticiones,
+                        peso = it.peso,
+                        categoria = it.categoria,
+                        completado = it.completado
+                    )
+                }
+                requireActivity().runOnUiThread {
+                    adapter.actualizarLista(listaCompleta)
+                }
+            }
+            return
+        }
+
+        lifecycleScope.launch {
+            try {
+                RutinaRepository.generarRutinaAutomatica()
+                rutinaGenerada = true
+
+                val rutina = RutinaRepository.obtenerRutinaHoy()
+                listaCompleta = rutina.map {
+                    Ejercicio(
+                        id = it.id,
+                        nombre = it.nombre,
+                        series = it.series,
+                        repeticiones = it.repeticiones,
+                        peso = it.peso,
+                        categoria = it.categoria,
+                        completado = it.completado
+                    )
+                }
+                requireActivity().runOnUiThread {
+                    adapter.actualizarLista(listaCompleta)
+                }
+            } catch (e: Exception) {
+                requireActivity().runOnUiThread {
+                    adapter.actualizarLista(emptyList())
+                }
+            }
+        }
+    }
+
     private fun seleccionarChip(categoria: String) {
         val chips      = listOf(chipTodos, chipEmpuje, chipJalon, chipPierna, chipAbdomen)
         val categorias = listOf("Todos", "Empuje", "Jalón", "Pierna", "Abdomen")
@@ -91,15 +154,8 @@ class EntrenamientoFragment : Fragment() {
             }
         }
 
-        filtrarPorCategoria(categoria)
-    }
-
-    private fun filtrarPorCategoria(categoria: String) {
-        val filtrada = if (categoria == "Todos") {
-            listaCompleta
-        } else {
-            listaCompleta.filter { it.categoria == categoria }
-        }
+        val filtrada = if (categoria == "Todos") listaCompleta
+        else listaCompleta.filter { it.categoria == categoria }
         adapter.actualizarLista(filtrada)
     }
 }

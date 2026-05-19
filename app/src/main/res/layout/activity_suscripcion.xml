@@ -25,7 +25,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@null"
-                android:src="@android:drawable/ic_media_previous"
+                android:src="@android:drawable/ic_menu_revert"
                 app:tint="@color/white" />
 
             <TextView
@@ -116,7 +116,7 @@
                 android:textSize="12sp"
                 android:layout_marginBottom="12dp" />
 
-            <!-- Caracteristicas -->
+            <!-- Características -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -132,20 +132,11 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginBottom="6dp">
-
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@android:drawable/checkbox_on_background"
-                    android:layout_marginEnd="8dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                    android:src="@android:drawable/checkbox_on_background" android:layout_marginEnd="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="@string/seguimiento_detallado_del_entrenamiento"
-                    android:textColor="@color/white"
-                    android:textSize="13sp" />
-
+                    android:textColor="@color/white" android:textSize="13sp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -154,20 +145,11 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginBottom="6dp">
-
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@android:drawable/checkbox_on_background"
-                    android:layout_marginEnd="8dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                    android:src="@android:drawable/checkbox_on_background" android:layout_marginEnd="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="@string/perspectivas_de_coaching_impulsadas_por_ia"
-                    android:textColor="@color/white"
-                    android:textSize="13sp" />
-
+                    android:textColor="@color/white" android:textSize="13sp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -176,20 +158,11 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginBottom="6dp">
-
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@android:drawable/checkbox_on_background"
-                    android:layout_marginEnd="8dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                    android:src="@android:drawable/checkbox_on_background" android:layout_marginEnd="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="@string/an_lisis_corporal_avanzado"
-                    android:textColor="@color/white"
-                    android:textSize="13sp" />
-
+                    android:textColor="@color/white" android:textSize="13sp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -198,20 +171,11 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginBottom="6dp">
-
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@android:drawable/checkbox_on_background"
-                    android:layout_marginEnd="8dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                    android:src="@android:drawable/checkbox_on_background" android:layout_marginEnd="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="@string/atenci_n_al_cliente_prioritaria"
-                    android:textColor="@color/white"
-                    android:textSize="13sp" />
-
+                    android:textColor="@color/white" android:textSize="13sp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -220,20 +184,11 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginBottom="6dp">
-
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@android:drawable/checkbox_on_background"
-                    android:layout_marginEnd="8dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                    android:src="@android:drawable/checkbox_on_background" android:layout_marginEnd="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="@string/experiencia_sin_publicidad"
-                    android:textColor="@color/white"
-                    android:textSize="13sp" />
-
+                    android:textColor="@color/white" android:textSize="13sp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -241,20 +196,11 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
-
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@android:drawable/checkbox_on_background"
-                    android:layout_marginEnd="8dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView android:layout_width="16dp" android:layout_height="16dp"
+                    android:src="@android:drawable/checkbox_on_background" android:layout_marginEnd="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="@string/programas_de_entrenamiento_exclusivos"
-                    android:textColor="@color/white"
-                    android:textSize="13sp" />
-
+                    android:textColor="@color/white" android:textSize="13sp"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -266,7 +212,7 @@
             android:orientation="vertical"
             android:background="@color/FondoGris"
             android:padding="16dp"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="24dp">
 
             <!-- Titulo + Badge AHORRA -->
             <LinearLayout
@@ -332,185 +278,7 @@
 
         </LinearLayout>
 
-        <!-- Historial de compras -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/historial_de_compras"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="12dp" />
-
-        <!-- Item historial 1 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pro_mensual"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/ene_22_2025"
-                    android:textColor="@color/GrisTexto"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="end">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_15_000"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pagado"
-                    android:textColor="@color/ColorVerde"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!-- Item historial 2 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="12dp">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pro_mensual"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/dic_22_2023"
-                    android:textColor="@color/GrisTexto"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="end">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_15_000"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pagado"
-                    android:textColor="@color/ColorVerde"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!-- Item historial 3 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="24dp">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pro_mensual"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/nov_22_2025"
-                    android:textColor="@color/GrisTexto"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="end">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_15_000"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pagado"
-                    android:textColor="@color/ColorVerde"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!-- Cancelar suscripcion -->
+        <!-- Cancelar suscripción -->
         <TextView
             android:id="@+id/tvCancelarSuscripcion"
             android:layout_width="match_parent"

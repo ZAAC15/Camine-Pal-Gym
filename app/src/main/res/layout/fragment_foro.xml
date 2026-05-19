@@ -20,77 +20,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <!-- Icono busqueda -->
-    <ImageView
-        android:id="@+id/ivBuscar"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@android:drawable/ic_menu_search"
-        app:tint="@color/white"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvTitulo"/>
-
-    <!-- Chips -->
+    <!-- Chips scrollables -->
     <HorizontalScrollView
         android:id="@+id/scrollChips"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:scrollbars="none"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
         app:layout_constraintTop_toBottomOf="@id/tvTitulo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <HorizontalScrollView
-            android:layout_width="0dp"
+        <!-- Los chips se generan dinámicamente en ForoFragment -->
+        <LinearLayout
+            android:id="@+id/contenedorChips"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:scrollbars="none"
-            app:layout_constraintTop_toBottomOf="@id/tvTitulo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingStart="12dp">
-
-                <!-- Chip fake -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tendencias"
-                    android:textColor="@color/black"
-                    android:background="@drawable/bg_chip_selected"
-                    android:paddingHorizontal="16dp"
-                    android:paddingVertical="8dp"
-                    android:layout_marginEnd="8dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/transformaciones"
-                    android:textColor="@color/white"
-                    android:background="@drawable/bg_chip"
-                    android:paddingHorizontal="16dp"
-                    android:paddingVertical="8dp"
-                    android:layout_marginEnd="8dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/t_cnica"
-                    android:textColor="@color/white"
-                    android:background="@drawable/bg_chip"
-                    android:paddingHorizontal="16dp"
-                    android:paddingVertical="8dp"
-                    android:layout_marginEnd="8dp"/>
-
-            </LinearLayout>
-
-        </HorizontalScrollView>
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"/>
 
     </HorizontalScrollView>
 
@@ -100,12 +49,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:padding="12dp"
+        android:clipToPadding="false"
         app:layout_constraintTop_toBottomOf="@id/scrollChips"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Boton flotante -->
+    <!-- Botón flotante -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAgregar"
         android:layout_width="wrap_content"

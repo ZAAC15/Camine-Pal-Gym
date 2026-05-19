@@ -38,7 +38,7 @@
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:text="@string/us"
-                android:textColor="@color/FondoGris"
+                android:textColor="@color/white"
                 android:textSize="12sp"
                 android:fontFamily="sans-serif-bold"
                 android:gravity="center"
@@ -426,7 +426,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="BMI"
-                            android:textColor="#888888"
+                            android:textColor="@color/ColorVerde"
                             android:textSize="12sp" />
 
                         <TextView
@@ -517,6 +517,7 @@
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
                         <View
+                            android:id="@+id/diaL"
                             android:layout_width="match_parent"
                             android:layout_height="56dp"
                             android:background="@drawable/bg_day_active"
@@ -538,6 +539,7 @@
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
                         <View
+                            android:id="@+id/diaM1"
                             android:layout_width="match_parent"
                             android:layout_height="56dp"
                             android:background="@drawable/bg_day_active"
@@ -559,6 +561,7 @@
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
                         <View
+                            android:id="@+id/diaM2"
                             android:layout_width="match_parent"
                             android:layout_height="56dp"
                             android:background="@drawable/bg_day_active"
@@ -580,6 +583,7 @@
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
                         <View
+                            android:id="@+id/diaJ"
                             android:layout_width="match_parent"
                             android:layout_height="56dp"
                             android:background="@drawable/bg_day_active"
@@ -601,6 +605,7 @@
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
                         <View
+                            android:id="@+id/diaV"
                             android:layout_width="match_parent"
                             android:layout_height="56dp"
                             android:background="@drawable/bg_day_active"
@@ -622,6 +627,7 @@
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
                         <View
+                            android:id="@+id/diaS"
                             android:layout_width="match_parent"
                             android:layout_height="56dp"
                             android:background="@drawable/bg_day_inactive"
@@ -643,6 +649,7 @@
                         android:orientation="vertical"
                         android:gravity="center_horizontal">
                         <View
+                            android:id="@+id/diaD"
                             android:layout_width="match_parent"
                             android:layout_height="56dp"
                             android:background="@drawable/bg_day_inactive"

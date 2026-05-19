@@ -11,14 +11,13 @@
         android:orientation="vertical"
         android:paddingBottom="24dp">
 
-        <!-- Header amarillo degradado -->
+        <!-- Header amarillo -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@color/ColorPrincipal">
-        </LinearLayout>
+            android:background="@color/ColorPrincipal" />
 
         <!-- Avatar centrado -->
         <LinearLayout
@@ -33,20 +32,19 @@
                 android:layout_height="80dp">
 
                 <TextView
+                    android:id="@+id/tvAvatarPerfil"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:text="@string/bj"
+                    android:text="U"
                     android:textColor="@color/white"
                     android:textSize="26sp"
                     android:textStyle="bold"
                     android:gravity="center"
                     android:background="@drawable/bg_avatar_circle" />
-
             </FrameLayout>
-
         </LinearLayout>
 
-        <!-- Nombre y fecha -->
+        <!-- Nombre y membresía -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -56,23 +54,26 @@
             android:paddingHorizontal="16dp">
 
             <TextView
+                android:id="@+id/tvNombrePerfil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/brayan_juanito"
+                android:text="Usuario"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/tvMiembroDesde"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/miembro_desde_enero_de_2024"
+                android:text="Miembro de Camine Pal Gym"
                 android:textColor="@color/GrisTexto"
                 android:textSize="13sp"
                 android:layout_marginTop="4dp" />
 
-            <!-- Badge Membresia Pro -->
+            <!-- Badge rol -->
             <LinearLayout
+                android:id="@+id/badgeRol"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -89,13 +90,13 @@
                     android:layout_marginEnd="6dp" />
 
                 <TextView
+                    android:id="@+id/tvBadgeRol"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/membres_a_pro"
                     android:textColor="@color/ColorPrincipal"
                     android:textSize="13sp"
                     android:textStyle="bold" />
-
             </LinearLayout>
 
             <!-- Botón Editar Perfil -->
@@ -109,10 +110,9 @@
                 android:backgroundTint="@color/background"
                 android:layout_marginTop="12dp"
                 style="@style/Widget.AppCompat.Button.Borderless" />
-
         </LinearLayout>
 
-        <!-- Estadisticas -->
+        <!-- Estadísticas -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -131,9 +131,10 @@
                 android:gravity="center">
 
                 <TextView
+                    android:id="@+id/tvEntrenamientosPerfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_505"
+                    android:text="0"
                     android:textColor="@color/ColorPrincipal"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -141,17 +142,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_12"
-                    android:textColor="@color/ColorVerde"
-                    android:textSize="11sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/entrenamientos"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp" />
-
             </LinearLayout>
 
             <!-- Divisor -->
@@ -170,9 +163,10 @@
                 android:gravity="center">
 
                 <TextView
+                    android:id="@+id/tvRachaPerfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_23"
+                    android:text="0"
                     android:textColor="@color/ColorPrincipal"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -180,17 +174,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_1__"
-                    android:textColor="@color/ColorVerde"
-                    android:textSize="11sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/racha_de_d_as"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp" />
-
             </LinearLayout>
 
             <!-- Divisor -->
@@ -209,9 +195,10 @@
                 android:gravity="center">
 
                 <TextView
+                    android:id="@+id/tvNivelPerfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/intermedio"
+                    android:text="--"
                     android:textColor="@color/ColorPrincipal"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -219,22 +206,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/estable"
-                    android:textColor="@color/GrisTexto"
-                    android:textSize="11sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/nivel"
                     android:textColor="@color/GrisTexto"
                     android:textSize="12sp" />
-
             </LinearLayout>
-
         </LinearLayout>
 
-        <!-- Seccion Logros -->
+        <!-- Logros -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -262,6 +240,7 @@
                 android:gravity="center">
 
                 <ImageView
+                    android:id="@+id/ivLogro1"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:src="@android:drawable/ic_menu_compass"
@@ -276,7 +255,6 @@
                     android:textSize="10sp"
                     android:gravity="center"
                     android:layout_marginTop="6dp" />
-
             </LinearLayout>
 
             <!-- Logro 2 -->
@@ -288,6 +266,7 @@
                 android:gravity="center">
 
                 <ImageView
+                    android:id="@+id/ivLogro2"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:src="@android:drawable/ic_menu_compass"
@@ -302,7 +281,6 @@
                     android:textSize="10sp"
                     android:gravity="center"
                     android:layout_marginTop="6dp" />
-
             </LinearLayout>
 
             <!-- Logro 3 -->
@@ -314,6 +292,7 @@
                 android:gravity="center">
 
                 <ImageView
+                    android:id="@+id/ivLogro3"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:src="@android:drawable/ic_menu_compass"
@@ -328,7 +307,6 @@
                     android:textSize="10sp"
                     android:gravity="center"
                     android:layout_marginTop="6dp" />
-
             </LinearLayout>
 
             <!-- Logro 4 -->
@@ -340,6 +318,7 @@
                 android:gravity="center">
 
                 <ImageView
+                    android:id="@+id/ivLogro4"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:src="@android:drawable/ic_menu_compass"
@@ -354,7 +333,6 @@
                     android:textSize="10sp"
                     android:gravity="center"
                     android:layout_marginTop="6dp" />
-
             </LinearLayout>
 
             <!-- Logro 5 -->
@@ -366,6 +344,7 @@
                 android:gravity="center">
 
                 <ImageView
+                    android:id="@+id/ivLogro5"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:src="@android:drawable/ic_menu_compass"
@@ -380,12 +359,10 @@
                     android:textSize="10sp"
                     android:gravity="center"
                     android:layout_marginTop="6dp" />
-
             </LinearLayout>
-
         </LinearLayout>
 
-        <!-- Seccin Ajustes -->
+        <!-- Ajustes -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -396,6 +373,8 @@
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="8dp" />
+
+        <!-- Panel Administrativo -->
         <LinearLayout
             android:id="@+id/id_administrativo"
             android:layout_width="match_parent"
@@ -403,6 +382,7 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:paddingHorizontal="16dp"
+            android:visibility="gone"
             android:background="?attr/selectableItemBackground">
 
             <ImageView
@@ -423,8 +403,8 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@android:drawable/ic_media_next" />
-
         </LinearLayout>
+
         <!-- Notificaciones -->
         <LinearLayout
             android:id="@+id/itemNotificaciones"
@@ -453,7 +433,6 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@android:drawable/ic_media_next" />
-
         </LinearLayout>
 
         <!-- Privacidad -->
@@ -484,10 +463,9 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@android:drawable/ic_media_next" />
-
         </LinearLayout>
 
-        <!--Tema -->
+        <!-- Tema -->
         <LinearLayout
             android:id="@+id/itemTema"
             android:layout_width="match_parent"
@@ -515,10 +493,9 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@android:drawable/ic_media_next" />
-
         </LinearLayout>
 
-        <!-- Suscripcion -->
+        <!-- Suscripción -->
         <LinearLayout
             android:id="@+id/itemSuscripcion"
             android:layout_width="match_parent"
@@ -546,7 +523,6 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@android:drawable/ic_media_next" />
-
         </LinearLayout>
 
         <!-- Ayuda y soporte -->
@@ -577,10 +553,9 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@android:drawable/ic_media_next" />
-
         </LinearLayout>
 
-        <!-- Cerrar sesion -->
+        <!-- Cerrar sesión -->
         <LinearLayout
             android:id="@+id/itemCerrarSesion"
             android:layout_width="match_parent"
@@ -608,9 +583,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@android:drawable/ic_media_next" />
-
         </LinearLayout>
 
     </LinearLayout>
-
 </ScrollView>

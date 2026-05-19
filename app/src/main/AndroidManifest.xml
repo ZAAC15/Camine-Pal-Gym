@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -11,11 +20,12 @@
         android:roundIcon="@mipmap/ic_camine_pal_gym_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CaminePalGym">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBW9yuw3uxxgSf-z_t0zXT7nvZCQRzECDY"/>
+
         <activity
             android:name=".ui.inicio.EditarMedidaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.inicio.PlanDeHoyActivity"
             android:exported="false" />
         <activity
             android:name=".ui.auth.RegisterActivity"
@@ -61,6 +71,14 @@
             android:exported="false" />
         <activity
             android:name=".ui.main.foro.CrearPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.OnboardingActivity"
+            android:exported="false" />
+        <activity android:name=".ui.main.entrenamiento.AgregarEjercicioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.tienda.TiendasCercanasActivity"
             android:exported="false" />
         <activity
             android:name=".ui.inicio.SplashActivity"

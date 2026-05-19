@@ -26,7 +26,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@null"
-                android:src="@android:drawable/ic_media_previous"
+                android:src="@android:drawable/ic_menu_revert"
                 app:tint="@color/white" />
 
             <TextView
@@ -39,8 +39,21 @@
                 android:textStyle="bold"
                 android:gravity="center" />
 
+            <View android:layout_width="40dp" android:layout_height="40dp" />
 
         </LinearLayout>
+
+        <!-- Carrito vacío -->
+        <TextView
+            android:id="@+id/tvCarritoVacio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tu carrito está vacío 🛒"
+            android:textColor="@color/GrisTexto"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:paddingVertical="40dp"
+            android:visibility="gone"/>
 
         <!-- Recycler Productos -->
         <androidx.recyclerview.widget.RecyclerView
@@ -50,7 +63,7 @@
             android:nestedScrollingEnabled="false"
             android:layout_marginBottom="16dp" />
 
-        <!-- Codigo descuento -->
+        <!-- Código descuento -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -81,7 +94,8 @@
                     android:textColor="@android:color/white"
                     android:textColorHint="@color/GrisTexto"
                     android:background="@color/background"
-                    android:padding="10dp" />
+                    android:padding="10dp"
+                    android:inputType="textCapCharacters"/>
 
                 <Button
                     android:id="@+id/btnAplicar"
@@ -106,37 +120,112 @@
             android:layout_marginBottom="16dp">
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/resumen_de_orden"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
-                android:layout_marginBottom="8dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_marginBottom="12dp" />
 
-            <TextView
-                android:text="@string/subtotal"
-                android:textColor="@android:color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <!-- Subtotal -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="6dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/subtotal"
+                    android:textColor="@color/GrisTexto"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/tvSubtotalValor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$ 0"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+            </LinearLayout>
 
-            <TextView
-                android:text="@string/env_o_gratis"
-                android:textColor="@color/ColorPrincipal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <!-- Descuento -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="6dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Descuento"
+                    android:textColor="@color/GrisTexto"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/tvDescuentoValor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$ 0"
+                    android:textColor="@color/ColorPrincipal"
+                    android:textSize="14sp"/>
+            </LinearLayout>
 
-            <TextView
-                android:text="@string/total"
-                android:textColor="@android:color/white"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:layout_marginTop="8dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <!-- Envío -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/env_o_gratis"
+                    android:textColor="@color/GrisTexto"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GRATIS"
+                    android:textColor="@color/ColorPrincipal"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Separador -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/GrisTexto"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Total -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/total"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/tvTotalValor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$ 0"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+            </LinearLayout>
 
         </LinearLayout>
 
-        <!-- Boton pagar -->
+        <!-- Botón pagar -->
         <Button
             android:id="@+id/btnPagar"
             android:layout_width="match_parent"

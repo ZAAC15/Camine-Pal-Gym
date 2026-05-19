@@ -31,10 +31,10 @@ class AyudaSoporteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ayuda_soporte)
 
-        // ── Botón atrás ───────────────────────────────────────────────
+        // ── Botón atrás ──
         findViewById<ImageButton>(R.id.btnBack).setOnClickListener { finish() }
 
-        // ── FAQs ──────────────────────────────────────────────────────
+        // ── FAQs ──
         // faq1 ya viene con su TextView de respuesta en el XML (el único expandido por defecto)
         // Los demás (faq2-faq5) son LinearLayout horizontales sin TextView de respuesta,
         // así que se los añadimos dinámicamente al hacer clic.
@@ -44,7 +44,7 @@ class AyudaSoporteActivity : AppCompatActivity() {
         setupFaq(R.id.faq4, tieneRespuestaEnXml = false, abrirPorDefecto = false)
         setupFaq(R.id.faq5, tieneRespuestaEnXml = false, abrirPorDefecto = false)
 
-        // ── Contactar soporte ─────────────────────────────────────────
+        // ── Contactar soporte ──
         findViewById<Button>(R.id.btnContactarSoporte).setOnClickListener {
             val intent = Intent(Intent.ACTION_SENDTO).apply {
                 data = Uri.parse("mailto:")
@@ -60,7 +60,7 @@ class AyudaSoporteActivity : AppCompatActivity() {
             }
         }
 
-        // ── Ir al foro ────────────────────────────────────────────────
+        // ── Ir al foro ──
         findViewById<Button>(R.id.btnForo).setOnClickListener {
             // Navega directo a la pestaña del foro en MainActivity
             Toast.makeText(this, "Abre el Foro desde la barra de navegación", Toast.LENGTH_SHORT).show()

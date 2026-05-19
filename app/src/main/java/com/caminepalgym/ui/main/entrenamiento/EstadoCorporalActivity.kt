@@ -31,7 +31,7 @@ class EstadoCorporalActivity : AppCompatActivity() {
 
                 runOnUiThread {
 
-                    // ── Overall Fitness Score ─────────────────────────────
+                    // ── Overall Fitness Score ──
                     // BMI (40pts) + Racha (30pts) + Nivel condición (30pts)
                     var score = 0
 
@@ -46,7 +46,7 @@ class EstadoCorporalActivity : AppCompatActivity() {
                     }
                     score += puntoBmi
 
-                    // Puntos por racha (máx 30 con 30+ días)
+                    // Puntos por racha (máx 30 con 30 + días)
                     val puntoRacha = minOf(racha * 3, 30)
                     score += puntoRacha
 
@@ -89,7 +89,7 @@ class EstadoCorporalActivity : AppCompatActivity() {
                         actualizarBarrasBMI(0)
                     }
 
-                    // ── Definición (basada en % grasa) ────────────────────
+                    // ── Definición (basada en % grasa) ──
                     val grasa = medidas?.porcentajeGrasa
                     val tvDefCirculo = findViewById<TextView>(R.id.tvDefinicionCirculo)
                     val tvDefLabel   = findViewById<TextView>(R.id.tvDefLabel)
@@ -122,7 +122,7 @@ class EstadoCorporalActivity : AppCompatActivity() {
                         tvDefSub.text     = "Agrega % de grasa"
                     }
 
-                    // ── Simetría ──────────────────────────────────────────
+                    // ── Simetría ──
                     // Calculada con nivel condición + BMI normal
                     val simetria = when {
                         medidas == null -> 0
@@ -141,7 +141,7 @@ class EstadoCorporalActivity : AppCompatActivity() {
                     findViewById<TextView>(R.id.tvSimetria).text = "$simetria%"
                     findViewById<ProgressBar>(R.id.progressSimetria).progress = simetria
 
-                    // ── Volumen ───────────────────────────────────────────
+                    // ── Volumen ──
                     // Estimado: peso * (1 - porcentajeGrasa/100) = masa magra
                     val tvVolumen = findViewById<TextView>(R.id.tvVolumen)
                     if (peso != null && peso > 0) {
@@ -155,7 +155,7 @@ class EstadoCorporalActivity : AppCompatActivity() {
                         tvVolumen.text = "-- kg"
                     }
 
-                    // ── Consistencia / Racha ──────────────────────────────
+                    // ── Consistencia / Racha ──
                     val tvConsistencia = findViewById<TextView>(R.id.tvConsistencia)
                     tvConsistencia.text = when (racha) {
                         0    -> "Sin racha aún"

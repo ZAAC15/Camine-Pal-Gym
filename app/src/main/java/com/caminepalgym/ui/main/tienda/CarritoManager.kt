@@ -2,9 +2,6 @@ package com.caminepalgym.ui.main.tienda
 
 import com.caminepalgym.data.ProductoData
 
-/**
- * Singleton que mantiene el carrito en memoria durante la sesión.
- */
 object CarritoManager {
 
     data class ItemCarrito(

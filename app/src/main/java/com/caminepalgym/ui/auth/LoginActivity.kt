@@ -53,7 +53,7 @@ class LoginActivity : AppCompatActivity() {
         val txtRegistro = findViewById<TextView>(R.id.txtRegistro)
         val txtOlvido   = findViewById<TextView>(R.id.txtOlvido)
 
-        // ── Login con correo y contraseña ──────────────────────────────
+        // ── Login con correo y contraseña ──
         btnIngresar.setOnClickListener {
             val correo = edtCorreo.text.toString().trim()
             val pass   = edtPassword.text.toString()
@@ -81,18 +81,18 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        // ── Login con Google ───────────────────────────────────────────
+        // ── Login con Google ──
         btnGoogle.setOnClickListener {
             googleSignInClient.signOut().addOnCompleteListener {
                 startActivityForResult(googleSignInClient.signInIntent, RC_SIGN_IN)
             }
         }
 
-        // ── Biometría ──────────────────────────────────────────────────
+        // ── Biometría ──
         imgHuella.setOnClickListener { mostrarBiometria() }
         imgFacial.setOnClickListener { mostrarBiometria() }
 
-        // ── Navegación ─────────────────────────────────────────────────
+        // ── Navegación ──
         txtRegistro.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
@@ -101,7 +101,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    // ── Google Sign In result ──────────────────────────────────────────
+    // ── Google Sign In result ──
     @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -166,7 +166,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    // ── Biometría ──────────────────────────────────────────────────────
+    // ── Biometría ──
     private fun mostrarBiometria() {
         val biometricManager = BiometricManager.from(this)
         val disponible = biometricManager.canAuthenticate(BIOMETRIC_STRONG or BIOMETRIC_WEAK or DEVICE_CREDENTIAL)
@@ -242,7 +242,7 @@ class LoginActivity : AppCompatActivity() {
         prompt.authenticate(promptInfo)
     }
 
-    // ── Guardar credenciales para biometría ────────────────────────────
+    // ── Guardar credenciales para biometría ──
     private fun guardarCredenciales(correo: String, pass: String) {
         getSharedPreferences(PREFS_AUTH, Context.MODE_PRIVATE)
             .edit()
@@ -251,7 +251,7 @@ class LoginActivity : AppCompatActivity() {
             .apply()
     }
 
-    // ── Ir a Main o Onboarding ─────────────────────────────────────────
+    // ── Ir a Main o Onboarding ──
     private fun irAMain() {
         lifecycleScope.launch {
             try {

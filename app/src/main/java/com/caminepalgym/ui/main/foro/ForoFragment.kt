@@ -39,7 +39,7 @@ class ForoFragment : Fragment() {
 
         usuarioActualId = SupabaseClient.client.auth.currentUserOrNull()?.id ?: ""
 
-        // ── RecyclerView ───────────────────────────────────────────────
+        // ── RecyclerView ──
         val recycler = view.findViewById<RecyclerView>(R.id.rvForo)
         recycler.layoutManager = LinearLayoutManager(requireContext())
 
@@ -51,7 +51,7 @@ class ForoFragment : Fragment() {
         )
         recycler.adapter = adapter
 
-        // ── Chips dinámicos ────────────────────────────────────────────
+        // ── Chips dinámicos ──
         val contenedorChips = view.findViewById<LinearLayout>(R.id.contenedorChips)
         contenedorChips.removeAllViews()
 
@@ -73,7 +73,7 @@ class ForoFragment : Fragment() {
         // Seleccionar Tendencias por defecto
         seleccionarChip("Tendencias", contenedorChips)
 
-        // ── FAB crear post ─────────────────────────────────────────────
+        // ── FAB crear post ──
         view.findViewById<FloatingActionButton>(R.id.fabAgregar).setOnClickListener {
             startActivity(Intent(requireContext(), CrearPostActivity::class.java))
         }

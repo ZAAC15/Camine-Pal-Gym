@@ -27,7 +27,7 @@ class PanelAdminActivity : AppCompatActivity() {
     private lateinit var tabAgregarUsuario: TextView
     private lateinit var tabProductos: TextView
 
-    // ── Usuarios ───────────────────────────────────────────────────────
+    // ── Usuarios ──
     private var listaUsuarios = listOf<UsuarioRepository.UsuarioData>()
     private lateinit var adapterUsuarios: UsuariosAdminAdapter
     private var rolSeleccionado = "cliente"
@@ -36,7 +36,7 @@ class PanelAdminActivity : AppCompatActivity() {
     private lateinit var btnRolAdmin: Button
     private lateinit var tvDescRol: TextView
 
-    // ── Productos ──────────────────────────────────────────────────────
+    // ── Productos ───
     private var listaProductos = listOf<ProductoData>()
     private lateinit var adapterProductos: ProductosAdminAdapter
 
@@ -67,9 +67,7 @@ class PanelAdminActivity : AppCompatActivity() {
         cargarProductos()
     }
 
-    // ══════════════════════════════════════════════════════════════════
     //  TAB 1 — USUARIOS
-    // ══════════════════════════════════════════════════════════════════
     @OptIn(InternalSerializationApi::class)
     private fun setupTabUsuarios() {
         val recyclerUsuarios = findViewById<RecyclerView>(R.id.recyclerUsuarios)
@@ -123,9 +121,7 @@ class PanelAdminActivity : AppCompatActivity() {
         }
     }
 
-    // ══════════════════════════════════════════════════════════════════
     //  TAB 2 — AGREGAR USUARIO
-    // ══════════════════════════════════════════════════════════════════
     private fun setupTabAgregarUsuario() {
         btnRolBasico = findViewById(R.id.btnRolBasico)
         btnRolPro    = findViewById(R.id.btnRolPro)
@@ -215,9 +211,7 @@ class PanelAdminActivity : AppCompatActivity() {
         }
     }
 
-    // ══════════════════════════════════════════════════════════════════
     //  TAB 3 — PRODUCTOS
-    // ══════════════════════════════════════════════════════════════════
     private fun setupTabProductos() {
         val recyclerProductos = findViewById<RecyclerView>(R.id.recyclerProductosAdmin)
         recyclerProductos.layoutManager = LinearLayoutManager(this)
@@ -344,9 +338,7 @@ class PanelAdminActivity : AppCompatActivity() {
             }
     }
 
-    // ══════════════════════════════════════════════════════════════════
     //  Cambiar rol usuario
-    // ══════════════════════════════════════════════════════════════════
     @InternalSerializationApi
     private fun cambiarRolUsuario(usuario: UsuarioRepository.UsuarioData, nuevoRol: String) {
         lifecycleScope.launch {
@@ -369,9 +361,7 @@ class PanelAdminActivity : AppCompatActivity() {
         }
     }
 
-    // ══════════════════════════════════════════════════════════════════
     //  Cambiar tab
-    // ══════════════════════════════════════════════════════════════════
     private fun cambiarTab(index: Int) {
         viewFlipper.displayedChild = index
         val activo   = getColor(R.color.ColorPrincipal)

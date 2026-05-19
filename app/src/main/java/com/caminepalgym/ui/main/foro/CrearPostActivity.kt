@@ -56,7 +56,7 @@ class CrearPostActivity : AppCompatActivity() {
         val btnPublicar    = findViewById<Button>(R.id.btnPublicar)
         tvSubiendo         = findViewById(R.id.tvSubiendo)
 
-        // ── Cargar nombre del usuario ──────────────────────────────────
+        // ── Cargar nombre del usuario ──
         lifecycleScope.launch {
             val usuario = UsuarioRepository.obtenerUsuarioActual()
             runOnUiThread {
@@ -68,12 +68,12 @@ class CrearPostActivity : AppCompatActivity() {
             }
         }
 
-        // ── Spinner etiquetas ──────────────────────────────────────────
+        // ── Spinner etiquetas ──
         val etiquetas = listOf("General", "Tendencias", "Transformaciones", "Técnica", "Nutrición")
         spinnerEtiq.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, etiquetas)
             .also { it.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item) }
 
-        // ── Tabs ───────────────────────────────────────────────────────
+        // ── Tabs ──
         tabTexto.setOnClickListener {
             modoFoto = false
             tabTexto.setBackgroundResource(R.drawable.bg_chip_selected)
@@ -92,12 +92,12 @@ class CrearPostActivity : AppCompatActivity() {
             boxImagen.visibility = View.VISIBLE
         }
 
-        // ── Botón seleccionar foto ─────────────────────────────────────
+        // ── Botón seleccionar foto ──
         btnSeleccionarFoto.setOnClickListener {
             selectorImagen.launch("image/*")
         }
 
-        // ── Publicar ───────────────────────────────────────────────────
+        // ── Publicar ──
         btnPublicar.setOnClickListener {
             val titulo    = inputTitulo.text.toString().trim()
             val contenido = inputContenido.text.toString().trim()
@@ -149,7 +149,7 @@ class CrearPostActivity : AppCompatActivity() {
             }
         }
 
-        // ── Botón atrás ────────────────────────────────────────────────
+        // ── Botón atrás ──
         findViewById<ImageButton>(R.id.btnBack).setOnClickListener { finish() }
     }
 

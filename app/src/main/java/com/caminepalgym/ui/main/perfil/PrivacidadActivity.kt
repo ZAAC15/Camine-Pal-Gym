@@ -29,25 +29,25 @@ class PrivacidadActivity : AppCompatActivity() {
 
         val prefs = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
 
-        // ── Referencias ────────────────────────────────────────────────
+        // ── Referencias ──
         val switchPerfilPublico   = findViewById<Switch>(R.id.switchPerfilPublico)
         val switchActividadAmigos = findViewById<Switch>(R.id.switchActividadAmigos)
         val switchDatosAnalisis   = findViewById<Switch>(R.id.switchDatosAnalisis)
         val switchUbicacion       = findViewById<Switch>(R.id.switchUbicacion)
 
-        // ── Restaurar estado guardado ──────────────────────────────────
+        // ── Restaurar estado guardado ──
         switchPerfilPublico.isChecked   = prefs.getBoolean(KEY_PERFIL_PUBLICO,   true)
         switchActividadAmigos.isChecked = prefs.getBoolean(KEY_ACTIVIDAD_AMIGOS, true)
         switchDatosAnalisis.isChecked   = prefs.getBoolean(KEY_DATOS_ANALISIS,   false)
         switchUbicacion.isChecked       = prefs.getBoolean(KEY_UBICACION,        false)
 
-        // ── Aplicar colores iniciales ──────────────────────────────────
+        // ── Aplicar colores iniciales ──
         actualizarEstiloSwitch(switchPerfilPublico)
         actualizarEstiloSwitch(switchActividadAmigos)
         actualizarEstiloSwitch(switchDatosAnalisis)
         actualizarEstiloSwitch(switchUbicacion)
 
-        // ── Listeners switches ─────────────────────────────────────────
+        // ── Listeners switches ──
         switchPerfilPublico.setOnCheckedChangeListener { _, isChecked ->
             prefs.edit().putBoolean(KEY_PERFIL_PUBLICO, isChecked).apply()
             actualizarEstiloSwitch(switchPerfilPublico)
@@ -72,7 +72,7 @@ class PrivacidadActivity : AppCompatActivity() {
             mostrarMensaje(isChecked, "Acceso a ubicación")
         }
 
-        // ── Botón descargar datos ──────────────────────────────────────
+        // ── Botón descargar datos ──
         findViewById<Button>(R.id.btnDescargarDatos).setOnClickListener {
             AlertDialog.Builder(this)
                 .setTitle("Descargar mis datos")
@@ -82,7 +82,7 @@ class PrivacidadActivity : AppCompatActivity() {
                 .aplicarEstiloDialog()
         }
 
-        // ── Botón borrar cuenta ────────────────────────────────────────
+        // ── Botón borrar cuenta ──
         findViewById<Button>(R.id.btnBorrarCuenta).setOnClickListener {
             AlertDialog.Builder(this)
                 .setTitle("⚠️ Borrar cuenta")
@@ -93,7 +93,7 @@ class PrivacidadActivity : AppCompatActivity() {
                 .aplicarEstiloDialog()
         }
 
-        // ── Botón atrás ───────────────────────────────────────────────
+        // ── Botón atrás ──
         findViewById<ImageButton>(R.id.btnBack).setOnClickListener { finish() }
     }
 

@@ -157,7 +157,7 @@ class EditarMedidaActivity : AppCompatActivity() {
                     }
                 }
             } catch (e: Exception) {
-                // Si no hay datos previos se queda en blanco
+                // Si no hay datos previps se queda en blanco
             }
         }
     }

@@ -35,7 +35,7 @@ class TemaActivity : AppCompatActivity() {
         colorActual  = prefs.getString(KEY_COLOR,  "dorado")  ?: "dorado"
         fuenteActual = prefs.getString(KEY_FUENTE, "medium")  ?: "medium"
 
-        // ── Referencias colores ───────────────────────────────────────
+        // ── Referencias colores ──
         vistas = mapOf(
             "dorado"  to findViewById(R.id.colorDorado),
             "azul"    to findViewById(R.id.colorAzul),
@@ -45,16 +45,16 @@ class TemaActivity : AppCompatActivity() {
             "rojo"    to findViewById(R.id.colorRojo)
         )
 
-        // ── Referencias botones fuente ────────────────────────────────
+        // ── Referencias botones fuente ──
         btnSmall  = findViewById(R.id.btnSmall)
         btnMedium = findViewById(R.id.btnMedium)
         btnLarge  = findViewById(R.id.btnLarge)
 
-        // ── Aplicar estado inicial ────────────────────────────────────
+        // ── Aplicar estado inicial ──
         actualizarSeleccionColor(colorActual, guardar = false)
         actualizarSeleccionFuente(fuenteActual, guardar = false)
 
-        // ── Listeners colores ─────────────────────────────────────────
+        // ── Listeners colores ──
         colores.forEach { color ->
             vistas[color]?.setOnClickListener {
                 actualizarSeleccionColor(color, guardar = true)
@@ -66,7 +66,7 @@ class TemaActivity : AppCompatActivity() {
             }
         }
 
-        // ── Listeners fuente ──────────────────────────────────────────
+        // ── Listeners fuente ──
         btnSmall.setOnClickListener {
             actualizarSeleccionFuente("small", guardar = true)
             prefs.edit().putString(KEY_FUENTE, "small").apply()
@@ -83,7 +83,7 @@ class TemaActivity : AppCompatActivity() {
             Toast.makeText(this, "Fuente grande seleccionada", Toast.LENGTH_SHORT).show()
         }
 
-        // ── Botón atrás ───────────────────────────────────────────────
+        // ── Botón atrás ──
         findViewById<ImageButton>(R.id.btnBack).setOnClickListener { finish() }
     }
 

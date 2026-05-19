@@ -93,9 +93,6 @@ class TiendasCercanasActivity : AppCompatActivity(), OnMapReadyCallback {
     /**
      * Busca tiendas de gym cercanas usando la Places API de Google Maps
      * a través de una URL de búsqueda web como fallback visual.
-     *
-     * Para producción real usar Places SDK:
-     * https://developers.google.com/maps/documentation/places/android-sdk
      */
     private fun buscarTiendasCercanas(centro: LatLng) {
         // Tiendas de gym conocidas en Bogotá como ejemplo de marcadores

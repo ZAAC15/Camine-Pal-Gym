@@ -14,10 +14,10 @@ class SuscripcionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_suscripcion)
 
-        // ── Botón atrás ───────────────────────────────────────────────
+        // ── Botón atrás ──
         findViewById<ImageButton>(R.id.btnBack).setOnClickListener { finish() }
 
-        // ── Botón suscribirse anual ────────────────────────────────────
+        // ── Botón suscribirse anual ──
         findViewById<Button>(R.id.btnSuscribirAnual).setOnClickListener {
             mostrarProximamente(
                 titulo  = "Plan Anual — \$108.000",
@@ -25,7 +25,7 @@ class SuscripcionActivity : AppCompatActivity() {
             )
         }
 
-        // ── Cancelar suscripción ───────────────────────────────────────
+        // ── Cancelar suscripción ──
         findViewById<TextView>(R.id.tvCancelarSuscripcion).setOnClickListener {
             AlertDialog.Builder(this)
                 .setTitle("Cancelar suscripción")

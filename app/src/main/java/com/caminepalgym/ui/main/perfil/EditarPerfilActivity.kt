@@ -153,7 +153,7 @@ class EditarPerfilActivity : AppCompatActivity() {
             try {
                 val userId = SupabaseClient.client.auth.currentUserOrNull()?.id ?: return@launch
 
-                // ── Actualizar tabla Usuarios ──────────────────────────────
+                // ── Actualizar tabla Usuarios ──
                 @kotlinx.serialization.Serializable
                 data class UsuarioUpdate(
                     val nombre: String,
@@ -190,7 +190,7 @@ class EditarPerfilActivity : AppCompatActivity() {
 
                     @kotlinx.serialization.Serializable
                     data class MedidasUpdate(
-                        val id: String,          // ← clave primaria de MedidasUsuario
+                        val id: String,          // clave primaria de MedidasUsuario
                         val altura: Double?,
                         val peso: Double?,
                         val objetivo: String

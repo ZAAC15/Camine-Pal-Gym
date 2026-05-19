@@ -35,25 +35,25 @@ class TiendaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // ── RecyclerView ───────────────────────────────────────────────
+        // ── RecyclerView ──
         recycler = view.findViewById(R.id.recycler_tienda)
         recycler.layoutManager = GridLayoutManager(requireContext(), 2)
         adapter = ProductAdapter(emptyList())
         recycler.adapter = adapter
 
-        // ── Carrito ────────────────────────────────────────────────────
+        // ── Carrito ──
         view.findViewById<ImageButton>(R.id.btnCarrito).setOnClickListener {
             startActivity(Intent(requireContext(), CarritoActivity::class.java))
         }
 
-        // ── Tiendas cercanas ───────────────────────────────────────────
+        // ── Tiendas cercanas ──
         val irATiendas = {
             startActivity(Intent(requireContext(), TiendasCercanasActivity::class.java))
         }
         view.findViewById<Button>(R.id.btnConsultarTiendas).setOnClickListener { irATiendas() }
         view.findViewById<ImageButton>(R.id.btnUbicacion).setOnClickListener { irATiendas() }
 
-        // ── Buscador ───────────────────────────────────────────────────
+        // ── Buscador ──
         view.findViewById<EditText>(R.id.etBuscarTienda)
             .addTextChangedListener(object : TextWatcher {
                 override fun afterTextChanged(s: Editable?) { filtrarLista(s.toString()) }
@@ -61,7 +61,7 @@ class TiendaFragment : Fragment() {
                 override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
             })
 
-        // ── Botones de categoría ───────────────────────────────────────
+        // ── Botones de categoría ──
         val btnTodos       = view.findViewById<Button>(R.id.btnCatTodos)
         val btnSuplementos = view.findViewById<Button>(R.id.btnCatSuplementos)
         val btnEquipo      = view.findViewById<Button>(R.id.btnCatEquipo)

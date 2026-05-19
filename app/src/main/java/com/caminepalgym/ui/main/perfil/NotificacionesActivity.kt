@@ -27,7 +27,7 @@ class NotificacionesActivity : AppCompatActivity() {
 
         val prefs = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
 
-        // ── Referencias ────────────────────────────────────────────────
+        // ── Referencias ──
         val switchRecordatorios = findViewById<Switch>(R.id.switchRecordatorios)
         val switchInforme       = findViewById<Switch>(R.id.switchInforme)
         val switchLogros        = findViewById<Switch>(R.id.switchLogros)
@@ -35,7 +35,7 @@ class NotificacionesActivity : AppCompatActivity() {
         val switchPush          = findViewById<Switch>(R.id.switchPush)
         val switchEmail         = findViewById<Switch>(R.id.switchEmail)
 
-        // ── Restaurar estado guardado (defaults según el XML) ──────────
+        // ── Restaurar estado guardado (defaults según el XML) ──
         switchRecordatorios.isChecked = prefs.getBoolean(KEY_RECORDATORIOS, true)
         switchInforme.isChecked       = prefs.getBoolean(KEY_INFORME,       true)
         switchLogros.isChecked        = prefs.getBoolean(KEY_LOGROS,        true)
@@ -43,7 +43,7 @@ class NotificacionesActivity : AppCompatActivity() {
         switchPush.isChecked          = prefs.getBoolean(KEY_PUSH,          true)
         switchEmail.isChecked         = prefs.getBoolean(KEY_EMAIL,         false)
 
-        // ── Aplicar colores iniciales ──────────────────────────────────
+        // ── Aplicar colores iniciales ──
         actualizarEstiloSwitch(switchRecordatorios)
         actualizarEstiloSwitch(switchInforme)
         actualizarEstiloSwitch(switchLogros)
@@ -51,7 +51,7 @@ class NotificacionesActivity : AppCompatActivity() {
         actualizarEstiloSwitch(switchPush)
         actualizarEstiloSwitch(switchEmail)
 
-        // ── Listeners ─────────────────────────────────────────────────
+        // ── Listeners ──
         switchRecordatorios.setOnCheckedChangeListener { _, isChecked ->
             prefs.edit().putBoolean(KEY_RECORDATORIOS, isChecked).apply()
             actualizarEstiloSwitch(switchRecordatorios)
@@ -88,7 +88,7 @@ class NotificacionesActivity : AppCompatActivity() {
             mostrarMensaje(isChecked, "Notificaciones por correo")
         }
 
-        // ── Botón atrás ───────────────────────────────────────────────
+        // ── Botón atrás ──
         findViewById<ImageButton>(R.id.btnBack).setOnClickListener { finish() }
     }
 

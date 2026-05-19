@@ -34,13 +34,13 @@ class CarritoActivity : AppCompatActivity() {
         tvVacio     = findViewById(R.id.tvCarritoVacio)
         tvDescuento = findViewById(R.id.tvDescuentoValor)
 
-        // ── RecyclerView ───────────────────────────────────────────────
+        // ── RecyclerView ───
         val recycler = findViewById<RecyclerView>(R.id.recyclerCarrito)
         recycler.layoutManager = LinearLayoutManager(this)
         adapter = CarritoAdapter(CarritoManager.obtenerItems()) { actualizarResumen() }
         recycler.adapter = adapter
 
-        // ── Código de descuento ────────────────────────────────────────
+        // ── Código de descuento ──
         findViewById<Button>(R.id.btnAplicar).setOnClickListener {
             val codigo = findViewById<EditText>(R.id.inputCodigo).text.toString().trim().uppercase()
             val pct = codigosValidos[codigo]
@@ -54,7 +54,7 @@ class CarritoActivity : AppCompatActivity() {
             }
         }
 
-        // ── Pagar ──────────────────────────────────────────────────────
+        // ── Pagar ──
         findViewById<Button>(R.id.btnPagar).setOnClickListener {
             if (CarritoManager.isEmpty()) {
                 Toast.makeText(this, "Tu carrito está vacío", Toast.LENGTH_SHORT).show()
@@ -71,7 +71,7 @@ class CarritoActivity : AppCompatActivity() {
                 }
         }
 
-        // ── Botón atrás ────────────────────────────────────────────────
+        // ── Botón atrás ──
         findViewById<ImageButton>(R.id.btnBack).setOnClickListener { finish() }
 
         actualizarResumen()
